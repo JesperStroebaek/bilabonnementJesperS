@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create-car</title>
+</head>
+<body>
+<form id="create-car-form" action="/create-car-submit" method="post">
+    <label for="car_brand">Brand</label><input type="text" id="car_brand" required>
+    <label for="car_model">Model</label><input type="text" id="car_model" required>
+    <label for="car_price">Price</label><input type="number" id="car_price" required>
+    <label for="prior_damage">Damage</label><input type="text" id="prior_damage">
+    <button type="submit">Create Car</button>
+</form>
+<form action="/create-car" method="post">
+    <input type="text" id="newcar" th:text="${newcar}">
+</form>
+
+</body>
+</html>
