@@ -1,20 +1,49 @@
 package com.bilabonnementjespers.models;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class CarModel {
 
-    private int carId;
-    private String brand;
 
-    public void CarModel(){
+    private int car_id;
+    private String brand = "jesper";
+    private String model = "jesper";
+    private int price = 100;
 
-    };
+    public CarModel(){
 
-    public int getCarId() {
-        return carId;
+    }
+    public CarModel(int car_id, String brand, String model, int price) {
+        this.car_id = car_id;
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+
+    }
+    public String getModel() {
+        return model;
     }
 
-    public void setCarId(int carId) {
-        this.carId = carId;
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+;
+
+    public int getCar_id() {
+        return car_id;
+    }
+
+    public void setCar_id(int car_id) {
+        this.car_id = car_id;
     }
 
     public String getBrand() {
@@ -25,8 +54,5 @@ public class CarModel {
         this.brand = brand;
     }
 
-    public CarModel(int carId, String brand) {
-        this.carId = carId;
-        this.brand = brand;
-    }
+
 }
