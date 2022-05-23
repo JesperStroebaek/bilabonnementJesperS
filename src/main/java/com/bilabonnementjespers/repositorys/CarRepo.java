@@ -14,11 +14,12 @@ public class CarRepo {
 
 @Autowired
 CarModel carModel;
-@Autowired
-   JdbcTemplate template; // = new JdbcTemplate();
+
+   JdbcTemplate template = new JdbcTemplate();
    public void addNewCar(){
       String sql = "INSERT INTO bilabonnement.cars (car_id,brand,model,price) VALUES (?,?,?,?);";
       template.update(sql, carModel.getCar_id(), carModel.getBrand(), carModel.getModel(), carModel.getPrice());
+
    }
    public List<CarModel> getCarList(){
       RowMapper rowMapper = new BeanPropertyRowMapper(CarModel.class);
