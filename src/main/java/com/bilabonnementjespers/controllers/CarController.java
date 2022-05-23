@@ -2,6 +2,7 @@ package com.bilabonnementjespers.controllers;
 
 import com.bilabonnementjespers.models.CarModel;
 import com.bilabonnementjespers.services.CarService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +12,8 @@ import java.util.List;
 
 @Controller
 public class CarController {
-
+@Autowired
+        CarService carService;
 CarModel carModel = new CarModel();
 
     @GetMapping("/cars-main")
@@ -25,9 +27,8 @@ CarModel carModel = new CarModel();
     }
     @PostMapping("/submit-car-form")
     public String createCar(Model model){
-
         model.addAttribute("carData", List.of(CarModel.class));
-
+        carService.addNewCar();
         return "redirect:/car-list";
     }
     @GetMapping("/car-list")
