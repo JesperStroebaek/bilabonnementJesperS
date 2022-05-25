@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <!-- Bootstrap - CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<head>
-    <meta charset="UTF-8">
+<head th:replace="fragments::head">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <title>car-list</title>
 </head>
 <body>
-<h1>Car List view Page</h1>
-<table id="car-list-table">
-<tbody>
-   <tr>
-    <td th:text="${car_id}"/>
-    <td th:text="${model}"/>
-    <td th:text="${brand}"/>
-    <td th:text="${price}"/>
+<header th:replace="fragments::header">
+    <h1>Car List</h1>
+</header>
 
+
+    <table id="car-list-table">
+<tbody>
+<thead>
+   <tr>
+    <tr th:text="${car_id}"/>
+    <tr th:text="${model}"/>
+    <tr th:text="${brand}"/>
+    <tr th:text="${price}"/>
+    </thead>
 <tr th:each="CarModel: ${carData}">
         <td th:text="${CarModel.car_id}">
         <td th:text="${CarModel.brand}">
@@ -24,5 +29,8 @@
 </tbody>
 </table>
 <a href="/cars-main">Return to menu</a>
+<footer th:replace="fragments::footer">
+
+</footer>
 </body>
 </html>

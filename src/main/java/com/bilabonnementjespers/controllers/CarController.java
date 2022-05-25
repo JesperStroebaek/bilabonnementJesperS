@@ -8,13 +8,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class CarController {
 @Autowired
-        CarService carService;
-CarModel carModel = new CarModel();
+CarService carService;
+@Autowired
+CarModel carModel;
 
     @GetMapping("/cars-main")
     public String carsMain(){
@@ -26,14 +28,18 @@ CarModel carModel = new CarModel();
                 return "/car-form";
     }
     @PostMapping("/submit-car-form")
-    public String createCar(Model model){
-        model.addAttribute("carData", List.of(CarModel.class));
-        carService.addNewCar();
-        return "redirect:/car-list";
+    public String submitCar(Model model){
+       model.addAttribute(carModel.getCar_id());
+        model.addAttribute(carModel.getBrand());
+        model.addAttribute(carModel.getModel());
+        model.addAttribute(carModel.getPrice());
+        System.out.println(carModel.getCar_id() + carModel.getBrand());
+        return "/car-list";
     }
     @GetMapping("/car-list")
-    public String carList(Model model){
-
+    public String renderCarList(Model model){
+        model.addAttribute(carModel);
+        System.out.println(carModel);
         return "/car-list";
     }
 }
