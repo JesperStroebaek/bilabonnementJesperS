@@ -13,14 +13,12 @@ import java.util.List;
 public class CarService {
     @Autowired
     CarRepo carRepo;
-    JdbcTemplate template;
-    CarModel carModel = new CarModel();
 
+    public List<CarModel> carList(){
+        carRepo.carModelList();
 
-
-    public void addNewCar() {
-        carRepo.addNewCar();
-
+        System.out.println(carList());
+        return carList();
     }
 
 }

@@ -7,9 +7,9 @@ public class CarModel {
 
 
     private int car_id;
-    private String brand = "jesper";
-    private String model = "jesper";
-    private int price = 100;
+    private String brand;
+    private String model;
+    private int price;
 
     public CarModel(){
 

@@ -1,24 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">       <!-- todo head fragment -->
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<link rel="stylesheet" href="/static/mystyle.css">
-<head>
-    <meta charset="UTF-8">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="fragments::head">
     <title>bilabonnement</title>
 </head>
 <body>
-<header>
-    <!-- todo <header th:frag="header-fragment"></header> lave header template færdig -->
-
+<header th:replace="fragments::header">
 </header>
-<br>
+
 
 <h1>Welcome</h1>
+
 <a href="/login"><button>LogIn</button></a>
 <br>
-<footer id="footer" th:fragment="~{footer}">
-    <h1>Hello Mofos</h1>
+<footer id="footer" th:replace="fragments::footer">
 </footer>
 </body>
 </html>
