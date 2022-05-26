@@ -1,0 +1,321 @@
+/* Nav Bar */
+nav#main-nav.main-nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-bg-color);
+    height: 70px;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    z-index: 10;
+}
+
+nav#main-nav.main-nav h1.logo
+{
+    position: absolute;
+    transform: translateY(60%);
+    left: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav#main-nav.main-nav ul
+{
+    position: absolute;
+    right: 40px;
+    transform: translateY(100%);
+}
+
+nav#main-nav.main-nav ul li
+{
+    position: relative;
+    transform: translateY(25%);
+    display: inline-block;
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+
+nav#main-nav.main-nav h1.logo,
+nav#main-nav.main-nav ul li a
+{
+    color: var(--primary-text-color);
+    text-shadow: var(--text-shadow);
+}
+
+nav#main-nav.main-nav ul li a
+{
+    padding: 10px 20px;
+    border-radius: calc(var(--base-border-radius) / 2);
+    font-weight: 600;
+    transition: color .15s ease-in, background-color .15s ease-in, box-shadow .15s ease-in;
+}
+
+nav#main-nav.main-nav ul li a:hover,
+nav#main-nav.main-nav ul li a.active
+{
+    color: var(--active-text-color);
+    background-color: var(--active-bg-color);
+    border-radius: calc(var(--base-border-radius) / 2);
+    box-shadow: var(--box-shadow);
+    transition: color .15s ease-in, background-color .15s ease-in, box-shadow .15s ease-in;
+}
+
+/* Section: Create Rental */
+section.create-rental
+{
+    display: none;
+    max-width: 100vw;
+}
+
+section.create-rental.show
+{
+    display: block;
+}
+
+section.create-rental h1
+{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: var(--text-shadow);
+}
+
+form
+{
+    top: 55%;
+}
+
+form,
+.bill-container
+{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--form-bg-color);
+    padding: 20px;
+    width: 80vw;
+    max-width: 100%;
+    border-radius: var(--base-border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+form label
+{
+    margin-bottom: 8px;
+    margin-top: -5px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"]
+{
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+    transition: box-shadow .15s ease-in;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus
+{
+    outline: var(--outline-focus-color);
+    box-shadow: inset var(--box-shadow);
+    transition: box-shadow .15s ease-in;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus,
+form input[type="text"]:focus::placeholder,
+form input[type="date"]:focus::placeholder,
+form input[type="number"]:focus::placeholder
+{
+    background: var(--primary-bg-color);
+    color: var(--primary-text-color);
+}
+
+section.create-rental form,
+section.damage-and-remediation form
+{
+    width: 80vw;
+    max-width: 100vw;
+}
+
+/* Section: Damage And Remediation */
+section.damage-and-remediation,
+section.damage-and-remediation,
+section.business-developers
+{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s ease-in;
+}
+
+section.create-rental.show,
+section.damage-and-remediation.show,
+section.business-developers.show
+{
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity .4s ease-in;
+
+}
+
+textarea.damage-description
+{
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: calc(var(--base-border-radius) / 2);
+    resize: none;
+    transition: box-shadow .15s ease-in;
+}
+
+textarea.damage-description:focus
+{
+    outline: var(--outline-focus-color);
+    box-shadow: inset var(--box-shadow);
+    transition: box-shadow .15s ease-in;
+}
+
+
+/* Section: Business Developers */
+section.business-developers
+{
+    overflow-y: scroll;
+}
+
+table
+{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+
+    width: 80vw;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+tr:first-child,
+tr:first-child td:nth-child(2)
+{
+    border: 2px solid #333;
+}
+
+table,
+td
+{
+    border: 1px solid #333;
+}
+
+
+thead
+{
+    height: 60px;
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+}
+
+thead tr
+{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: var(--text-shadow);
+}
+
+tr
+{
+    text-align: center;
+    height: 50px;
+}
+
+button.btn.add-row
+{
+    position: absolute;
+    top: 100px;
+    right: 195px;
+    width: 200px;
+    white-space: nowrap;
+}
+
+button.btn.add-row i
+{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+form.container.message-container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+form.checkmark-container
+{
+    position: relative;
+    left: -50px;
+    top: -80px;
+    transform: translateX(-50%);
+}
+
+form.checkmark-container
+{
+    position: relative;
+    left: -50px;
+    top: -80px;
+    transform: translateX(-50%);
+}
+
+form.checkmark-container i
+{
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: var(--primary-bg-color);
+    height: 100px;
+    width: 100px;
+    border-radius: calc(var(--base-border-radius) * 5);
+    font-size: 40px;
+    box-shadow: var(--box-shadow);
+    text-shadow: var(--text-shadow);
+    color: var(--primary-text-color);
+}
+
+form.container.message-container h1
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--primary-bg-color);
+}

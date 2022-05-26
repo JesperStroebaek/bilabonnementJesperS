@@ -15,13 +15,16 @@ public class MainController {
     public String loginPage(){
         return "/login";
     }
-    @PostMapping("/login-submit")
-    public String loginSubmit(){
-        return "redirect:/main";
+    @PostMapping("/submit-login")
+    public String submitLogin(String username, String password){
+        if(username.equalsIgnoreCase("root") && (password.equals("open"))){
+            return "redirect:/main-page";
+        }
+        return "/login";
     }
-    @GetMapping("/main")
+    @GetMapping("/main-page")
     public String mainPage(){
-        return "/main";
+        return "/main-page";
     }
 
 

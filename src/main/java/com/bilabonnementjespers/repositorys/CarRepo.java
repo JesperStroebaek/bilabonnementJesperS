@@ -5,28 +5,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.StatementCallback;
 import org.springframework.stereotype.Repository;
 
-import java.sql.ResultSet;
-import java.util.Arrays;
 import java.util.List;
 
 @Repository
 public class CarRepo {
 
-@Autowired
-JdbcTemplate template;
+
+JdbcTemplate template = new JdbcTemplate();
 
 @Autowired
 CarModel carModel;
    public List<CarModel> carModelList(){
+      String sql = "SELECT * FROM cars;";
       RowMapper<CarModel> carModelRowMapper = new BeanPropertyRowMapper<>(CarModel.class);
-      String sql = "INSERT INTO bilabonnement.cars (car_id,brand,model,price) VALUES (?,?,?,?);";
-      template.query(sql, carModelRowMapper);
-      return carModelList();
-
+      return template.query(sql, carModelRowMapper);
+   }
+   public void createCar(CarModel c){
+      String sql = "INSERT INTO cars (car_id, brand, model, price) VALUES (?,?,?,?)";
+      System.out.println(c);
+     template.update(sql,c.getCar_id()+c.getBrand()+c.getModel()+c.getPrice());
    }
 
 //update(sql, carModel.getCar_id(), carModel.getBrand(), carModel.getModel(), carModel.getPrice());
+//" (car_id,brand,model,price) VALUES (?,?,?,?);";
+//
 }
