@@ -2,13 +2,10 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <!-- Bootstrap - CSS only -->
 <head th:replace="fragments::head">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <title>car-list</title>
+       <title>car-list</title>
 </head>
 <body>
 <header th:replace="fragments::header">
-    <h1>Car List</h1>
 </header>
 
 
@@ -21,7 +18,7 @@
     <tr th:text="${brand}"/>
     <tr th:text="${price}"/>
     </thead>
-<tr th:each="CarModel: ${carData}">
+<tr th:each="CarModel: ${carModelList}">
         <td th:text="${CarModel.car_id}">
         <td th:text="${CarModel.brand}">
         <td th:text="${CarModel.model}">

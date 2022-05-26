@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head th:replace="fragments::head">
-<title>login-page</title>
+<title>login</title>
 </head>
 <body>
 <header th:replace="fragments::header">
 
 </header>
+
+
+
 <br>
 
-<form action="/login-submit" method="post" class="login-form">
+<form action="/submit-login" method="post" class="login-form">
     <label for="username">UserName</label>
     <input type="text" name="username" id="username">
     <label for="password">Password</label>
     <input type="password" id="password" name="password">
-    <button type="submit">Enter Application</button>
+    <button type="submit">Enter!</button>
 </form>
 <br>
-<footer th:replace="fragments::footer">
+<footer th:replace="fragments::footer"/>
 
-</footer>
 </body>
 </html>
