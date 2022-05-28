@@ -19,15 +19,15 @@
 
 </thead>
     <tr>
-        <input type="text" name="brand" id="brand" placeholder="brand">
-        <input type="text" name="model" id="model" placeholder="model">
-        <input type="number" name="price" id="price" placeholder="price">
+        <input type="text" th:name="${brand}" id="brand" placeholder="brand">
+        <input type="text" name="model" th:id="${model}" placeholder="model">
+        <input th:type="number" name="price" id="price" placeholder="price">
 </tr>
 
 
 </table>
     <div><button type="submit">Create Car</button></div>
-<div id="cancelknap">X<button type="button"><a href="car-main.html"></a>Cancel</button></div>
+<div id="cancelknap">X<button type="button"><a href="/car-main"></a>Cancel</button></div>
 
 
 
