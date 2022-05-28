@@ -32,6 +32,7 @@ public class CarController {
 
     @PostMapping("/submit-car-form")
     public String submitCar(@ModelAttribute CarModel c) {
+
         carService.carModelList();
         return "redirect:/car-list";
     }
