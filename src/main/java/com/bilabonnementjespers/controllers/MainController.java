@@ -26,7 +26,9 @@ public class MainController {
     public String mainPage(){
         return "/main-page";
     }
-
-
+    @GetMapping("/reg-main")
+    public String registrationMain(){
+        return "/reg-main";
+    }
 
 }

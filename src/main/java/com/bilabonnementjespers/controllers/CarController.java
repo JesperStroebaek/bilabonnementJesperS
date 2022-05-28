@@ -9,15 +9,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class CarController {
     @Autowired
     CarService carService;
-    @Autowired
-    CarModel carModel;
+
 
     @GetMapping("/cars-main")
     public String carsMain() {
@@ -31,21 +29,19 @@ public class CarController {
     }
 
     @PostMapping("/submit-car-form")
-    public String submitCar(@ModelAttribute CarModel c) {
-
-        carService.carModelList();
+    public String createCar(Model model) {
+List<CarModel> carModels = carService.carModelList(model);
+        model.addAttribute("cars", carModels);
         return "redirect:/car-list";
     }
 
     @GetMapping("/car-list")
-    public String carList(Model model) {
-        List<CarModel> car = new ArrayList<>();
-            model.addAttribute("car_id",carModel.getCar_id());
-            model.addAttribute("brand",carModel.getBrand());
-            model.addAttribute("model",carModel.getModel());
-            model.addAttribute("price",carModel.getPrice());
-        System.out.println(car);
-
-            return "/car-list";
+    public String carList() {
+        return "/car-list";
         }
+    @PostMapping("/car-form")
+    public String carList(@ModelAttribute CarModel carModel1){
+        carService.createCar(carModel1);
+        return "redirect:/car-list";
     }
+}

@@ -15,14 +15,16 @@ public class CarService {
     @Autowired
     CarRepo carRepo;
 
-JdbcTemplate template = new JdbcTemplate();
+
     public List<CarModel> carModelList()
     {
         return carRepo.carModelList();
     }
-public void createCar(CarModel c){
+
+
+    public void createCar(CarModel c){
         carRepo.createCar(c);
-        System.out.println(c);
+
     }
 
 }

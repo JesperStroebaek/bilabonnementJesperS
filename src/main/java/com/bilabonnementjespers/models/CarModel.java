@@ -2,7 +2,7 @@ package com.bilabonnementjespers.models;
 
 import org.springframework.stereotype.Service;
 
-@Service
+
 public class CarModel {
 
     public int getCar_id() {

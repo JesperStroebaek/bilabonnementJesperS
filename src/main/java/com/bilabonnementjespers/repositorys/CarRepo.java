@@ -12,20 +12,18 @@ import java.util.List;
 @Repository
 public class CarRepo {
 
+   CarModel carModel = new CarModel();
 
 JdbcTemplate template = new JdbcTemplate();
 
-@Autowired
-CarModel carModel;
    public List<CarModel> carModelList(){
-      String sql = "SELECT * FROM cars;";
+      String sql = "SELECT * FROM bilabonnement.cars;";
       RowMapper<CarModel> carModelRowMapper = new BeanPropertyRowMapper<>(CarModel.class);
       return template.query(sql, carModelRowMapper);
    }
    public void createCar(CarModel c){
-      String sql = "INSERT INTO cars (car_id, brand, model, price) VALUES (?,?,?,?)";
-      System.out.println(c);
-     template.update(sql,c.getCar_id()+c.getBrand()+c.getModel()+c.getPrice());
+      String sql = "INSERT INTO bilabonnement.cars (car_id, brand, model, price) VALUES (?,?,?,?)";
+      template.update(sql,c.getCar_id()+c.getBrand()+c.getModel()+c.getPrice());
    }
 
 //update(sql, carModel.getCar_id(), carModel.getBrand(), carModel.getModel(), carModel.getPrice());
