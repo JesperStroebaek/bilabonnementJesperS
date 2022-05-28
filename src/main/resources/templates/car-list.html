@@ -10,22 +10,25 @@
 
 
     <table id="car-list-table">
-<tbody>
-<thead>
-   <tr>
-    <tr th:text="${car_id}"/>
-    <tr th:text="${model}"/>
-    <tr th:text="${brand}"/>
-    <tr th:text="${price}"/>
-    </thead>
-<tr th:each="CarModel: ${carModelList}">
+   <tr><th>
+     <h4>car_id</h4>
+     <h4>model </h4>
+     <h4>brand </h4>
+     <h4>price </h4>
+   </th>
+   </tr>
+    </table>
+<table>
+<tr th:each="CarModel:${carModelList}">
         <td th:text="${CarModel.car_id}">
         <td th:text="${CarModel.brand}">
         <td th:text="${CarModel.model}">
    </tr>
-</tbody>
 </table>
 <a href="/cars-main">Return to menu</a>
+
+
+
 <footer th:replace="fragments::footer">
 
 </footer>
