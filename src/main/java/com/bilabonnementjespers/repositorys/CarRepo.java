@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public class CarRepo {
 
-   CarModel carModel = new CarModel();
+
 
 JdbcTemplate template = new JdbcTemplate();
 
@@ -22,11 +22,11 @@ JdbcTemplate template = new JdbcTemplate();
       return template.query(sql, carModelRowMapper);
    }
    public void createCar(CarModel c){
-      String sql = "INSERT INTO bilabonnement.cars (car_id, brand, model, price) VALUES (?,?,?,?)";
-      template.update(sql,c.getCar_id()+c.getBrand()+c.getModel()+c.getPrice());
+      String sqlQuery = "INSERT INTO bilabonnement.cars " +
+              "(car_id, brand, model, price) VALUES (?,?,?,?)";
+
+      template.update(sqlQuery,c.getCar_id(),c.getBrand(),c.getModel(),c.getPrice());
    }
 
-//update(sql, carModel.getCar_id(), carModel.getBrand(), carModel.getModel(), carModel.getPrice());
-//" (car_id,brand,model,price) VALUES (?,?,?,?);";
-//
+
 }
