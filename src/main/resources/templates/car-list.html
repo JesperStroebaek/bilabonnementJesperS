@@ -5,24 +5,25 @@
        <title>car-list</title>
 </head>
 <body>
-<header th:replace="fragments::header">
+<header th:replace="fragments::header-fragment">
 </header>
 
 
     <table id="car-list-table">
    <tr><th>
-     <h4>car_id</h4>
-     <h4>model </h4>
-     <h4>brand </h4>
-     <h4>price </h4>
+     <p>tabel</p>
+     <p>tabel</p>
+     <p>tabel</p>
+     <p>tabel</p>
    </th>
    </tr>
     </table>
 <table>
-<tr th:each="CarModel:${carModelList}">
-        <td th:text="${CarModel.car_id}">
-        <td th:text="${CarModel.brand}">
-        <td th:text="${CarModel.model}">
+<tr th:each="cars:${carsList}">
+        <td th:text="${cars.car_id}"/>
+        <td th:text="${cars.brand}"/>
+        <td th:text="${cars.model}"/>
+        <td th:text="${cars.price}"/>
    </tr>
 </table>
 <a href="/cars-main">Return to menu</a>

@@ -15,22 +15,16 @@ import java.util.List;
 public class CarController {
     @Autowired
     CarService carService;
-
-
     @GetMapping("/cars-main")
     public String carsMain() {
-
         return "/cars-main";
-    }
-
-    @GetMapping("/car-form")
+    }@GetMapping("/car-form")
     public String carForm() {
         return "/car-form";
     }
-
     @PostMapping("/submit-car-form")
     public String createCar(Model model) {
-List<CarModel> carModels = carService.carModelList(model);
+    List<CarModel> carModels = carService.carModelList();
         model.addAttribute("cars", carModels);
         return "redirect:/car-list";
     }
@@ -40,8 +34,8 @@ List<CarModel> carModels = carService.carModelList(model);
         return "/car-list";
         }
     @PostMapping("/car-form")
-    public String carList(@ModelAttribute CarModel carModel1){
-        carService.createCar(carModel1);
+    public String carList(@ModelAttribute CarModel carsList){
+        carService.createCar(carsList);
         return "redirect:/car-list";
     }
 }

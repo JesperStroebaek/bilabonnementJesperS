@@ -10,24 +10,27 @@
 
 
 <br>
-<div><form id="car-form" action="/submit-car-form" method="post">
-<table id="car-form-table">
-    <thead>
+<div class="car-form-table">
+    <form id="car-form-submit-btn" action="/submit-car-form" method="post">
+<table class="header-table">
+
+    <tr><th>
+      <h2>Input the data from the new car!</h2>
+    </th>
+    </tr>
+<!--  todo  th:value="${cars.brand}"
+    th:value="${cars.model}"
+    th:value="${cars.price}"
+ -->
     <tr>
-        <h3>Id</h3><h3>Brand</h3><h3>Model</h3>
+        <td><input type="text" name="brand" id="brand" placeholder="brand"></td>
+        <td><input type="text" name="model" id="model" placeholder="model"></td>
+        <td><input type="number" name="price" id="price" placeholder="price"></td>
     </tr>
 
-</thead>
-    <tr>
-        <input type="text" name="brand" id="brand" placeholder="brand" th:value="${brand}">
-        <input type="text" name="model" id="model" placeholder="model" th:value="${model}">
-        <input type="number" name="price" id="price" placeholder="price" th:value="${price}">
-</tr>
-
-
-</table>
-    <div><button type="submit">Create Car</button></div>
-<div id="cancelknap">X<button type="button"><a href="/car-main"></a>Cancel</button></div>
+    </table>
+        <div id="submit-carform-button"><button type="submit">Create Car</button></div>
+        <div id="cancel-btn"><button type="button"><a href="/car-main"></a>Cancel</button></div>
 
 
 
