@@ -31,4 +31,11 @@ public class MainController {
         return "/reg-main";
     }
 
+    @GetMapping("/customer-main")
+    public String customerMain(){
+        return "/customer-main";
+    }
+
+
+
 }

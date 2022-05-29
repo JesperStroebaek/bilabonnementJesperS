@@ -12,14 +12,16 @@ import java.util.List;
 @Repository
 public class CarRepo {
 
-
+//@Autowired
+  // todo      JdbcTemplate template;
 
 JdbcTemplate template = new JdbcTemplate();
 
    public List<CarModel> carModelList(){
+
       String sql = "SELECT * FROM bilabonnement.cars;";
       RowMapper<CarModel> carModelRowMapper = new BeanPropertyRowMapper<>(CarModel.class);
-      return template.query(sql, carModelRowMapper);
+      return template.query(sql,carModelRowMapper);
    }
    public void createCar(CarModel c){
       String sqlQuery = "INSERT INTO bilabonnement.cars " +
