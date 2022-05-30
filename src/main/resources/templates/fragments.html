@@ -1,46 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
     <head th:fragment="head">
-        <link rel="stylesheet" href="/static/css/global.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="stylesheet" href="/static/css/style.css">
-        <link rel="stylesheet" href="/static/css/utilities.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/mystyle.css">
         <script src="https://kit.fontawesome.com/e05f21b32e.js" crossorigin="anonymous"></script>
-        <script th:src="@{/js/main.js}" defer></script>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" th:href="@{/css/style.css}">
-        <link rel="stylesheet" th:href="@{/css/global.css}">
-        <link rel="stylesheet" th:href="@{/css/utilities.css}">
-        <script src="https://kit.fontawesome.com/e05f21b32e.js" crossorigin="anonymous"></script>
-        <script th:src="@{/js/main.js}" defer></script>
-
-            <meta charset="UTF-8">
-            <meta name="viewport"
-                  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <link rel="stylesheet" th:href="@{/css/style.css}">
-            <link rel="stylesheet" th:href="@{/css/global.css}">
-            <link rel="stylesheet" th:href="@{/css/utilities.css}">
-            <script src="https://kit.fontawesome.com/e05f21b32e.js" crossorigin="anonymous"></script>
-            <script th:src="@{/js/main.js}" defer></script>
-            <title>Bilabonnement</title>
-
-
-
         <title>thymeleaf-template</title>
     </head>
 <body>
 
-<header th:fragments="header" id="header" class="header">
-    <div id="header-table">
-        <table id="">
+<header th:fragment="header">
+   <!-- <div id="header-table">
+        <table>
             <tr><th>
-
+                <td></td>
+                <td></td>
+                <td></td>
             </th></tr>
-            <tbody id="main-page">
+
             <tr>
 
             </tr>
@@ -49,16 +27,14 @@
             </tr>
             <tr>
             </tr>
-            </tbody>
-
         </table>
-    </div>
+    </div> -->
 </header>
-
-        <button>Registration<a href="/customers-main">Customers</a></button>
-        <h4><a href="/orders-main">Orders</a></h4>
-        <h4><a href="/cars-main">Cars</a></h4>
-
+<div>
+        <button>Registration<a href="reg-main.html"></a></button>
+        <button>Damage And Repairs<a href="damage-main.html"></a></button>
+        <button>Cars<a href="cars-main.html"></a></button>
+</div>
 <div id="navi-bar">
     <ul>
         <li>
@@ -107,7 +83,7 @@
             </a>
         </li>
         <li>
-            <a href="/business-developer">
+            <a href="#">
                 <i class="ai-person"></i>
                 <span>Profile</span>
             </a>
@@ -116,25 +92,20 @@
 
 
 </div>
-<footer th:fragments="footer">
+<footer th:fragment="footer">
     <div id="footer-flex-parent">
         <div id="flex-1">
-            <div>
-                <a href=""></a>
-            </div>
+
+        <p>flex1</p>
         </div>
         <div id="flex-2">
-            <div id="reg-link-btn">
-                <button><a href="/reg-main"></a></button>
-            </div>
+            <button>Registration<a href="reg-main.html"></a></button>
         </div>
         <div id="flex-3">
-            <div>
+
                 <a href="https://www.github/jesperstroebaek">• gitHub •</a>
-            </div>
-            <div>
-                <a href="/contact-form">• send me an Email •</a>
-            </div>
+                <a href="contact-form.html">• send me an Email •</a>
+
         </div>
     </div>
     <p>- JESPER S  - DAT21C - KEA • 2022 -</p>

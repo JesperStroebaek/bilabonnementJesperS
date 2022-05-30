@@ -15,15 +15,16 @@ public class CarService {
     @Autowired
     CarRepo carRepo;
 
+    CarModel c = new CarModel();
 
-    public List<CarModel> carModelList()
+    public List<CarModel> carModelList2()
     {
         return carRepo.carModelList();
     }
 
 
-    public void createCar(CarModel c){
-        carRepo.createCar(c);
+    public void createNewCar(CarModel carlo){
+        carRepo.createCar();
 
     }
 

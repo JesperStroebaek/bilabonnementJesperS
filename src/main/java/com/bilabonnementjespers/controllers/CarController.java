@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -30,7 +31,7 @@ public class CarController {
 
     @PostMapping("/submit-car-form")
     public String createCar(Model model) {
-List<CarModel> carModels = carService.carModelList(model);
+        List<CarModel> carModels = carService.carModelList2();
         model.addAttribute("cars", carModels);
         return "redirect:/car-list";
     }
@@ -39,9 +40,11 @@ List<CarModel> carModels = carService.carModelList(model);
     public String carList() {
         return "/car-list";
         }
+
+
     @PostMapping("/car-form")
     public String carList(@ModelAttribute CarModel carModel1){
-        carService.createCar(carModel1);
+        carService.createNewCar(carModel1);
         return "redirect:/car-list";
     }
 }

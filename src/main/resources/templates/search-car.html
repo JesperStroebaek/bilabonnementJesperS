@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div><form id="car-form" action="/submit-car-form" method="post">
+    <table id="car-form-table">
+        <thead>
+        <tr>
+            <h3>Id</h3><h3>Brand</h3><h3>Model</h3>
+        </tr>
+        th:name="${brand}"   th:id="${model}"
+        </thead>
+        <tr>
+            <input type="text"  id="brand" placeholder="brand">
+            <input type="text" name="model"  placeholder="model">
+            <input type="number" name="price" id="price" placeholder="price">
+        </tr>
+
+
+    </table>
+    <div><button type="submit">Start search</button></div>
+    <div id="cancelknap">X<button type="button"><a href="/car-main"></a>Cancel</button></div>
+
+
+
+</form>
+</div>
+</body>
+</html>

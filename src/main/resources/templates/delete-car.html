@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="fragments::head">
+
+    <title>deleteCar</title>
+</head>
+<body>
+<header th:replace="fragments::#header">
+
+</header>
+
+<div><form id="car-form" action="/submit-car-form" method="post">
+    <table id="car-form-table">
+        <thead>
+        <tr>
+            <h3>Id</h3><h3>Brand</h3><h3>Model</h3>
+        </tr>
+
+        </thead>
+        <tr>
+            <input type="text" th:name="${brand}" id="brand" placeholder="brand">
+            <input type="text" name="model" th:id="${model}" placeholder="model">
+            <input th:type="number" name="price" id="price" placeholder="price">
+        </tr>
+
+
+    </table>
+    <div><button type="submit">Create Car</button></div>
+    <div id="cancelknap">X<button type="button"><a href="/car-main"></a>Cancel</button></div>
+
+
+
+</form>
+</div>
+<!-- todo input for searchterms -->
+<footer th:replace="fragments::#footer-flex-parent"></footer>
+</body>
+</html>

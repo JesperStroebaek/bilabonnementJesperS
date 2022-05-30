@@ -1,7 +1,6 @@
 package com.bilabonnementjespers.repositorys;
 
 import com.bilabonnementjespers.models.CarModel;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -12,17 +11,18 @@ import java.util.List;
 @Repository
 public class CarRepo {
 
-   CarModel carModel = new CarModel();
+   CarModel c = new CarModel();
 
 JdbcTemplate template = new JdbcTemplate();
 
    public List<CarModel> carModelList(){
       String sql = "SELECT * FROM bilabonnement.cars;";
       RowMapper<CarModel> carModelRowMapper = new BeanPropertyRowMapper<>(CarModel.class);
-      return template.query(sql, carModelRowMapper);
+            return template.query(sql,carModelRowMapper);
    }
-   public void createCar(CarModel c){
+   public void createCar(){
       String sql = "INSERT INTO bilabonnement.cars (car_id, brand, model, price) VALUES (?,?,?,?)";
+      System.out.println(c.getCar_id()+c.getBrand()+c.getModel()+c.getPrice());
       template.update(sql,c.getCar_id()+c.getBrand()+c.getModel()+c.getPrice());
    }
 

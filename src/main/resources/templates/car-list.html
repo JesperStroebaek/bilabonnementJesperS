@@ -18,10 +18,10 @@
     <tr th:text="${brand}"/>
     <tr th:text="${price}"/>
     </thead>
-<tr th:each="CarModel: ${carModelList}">
-        <td th:text="${CarModel.car_id}">
-        <td th:text="${CarModel.brand}">
-        <td th:text="${CarModel.model}">
+<tr th:each="cars: ${carModelList}">
+        <td th:text="${cars.car_id}">
+        <td th:text="${cars.brand}">
+        <td th:text="${cars.model}">
    </tr>
 </tbody>
 </table>

@@ -10,25 +10,22 @@
 
 
 <br>
-<div><form id="car-form" action="/submit-car-form" method="post">
-<table id="car-form-table">
-    <thead>
-    <tr>
-        <h3>Id</h3><h3>Brand</h3><h3>Model</h3>
-    </tr>
+<div><form id="create-car-form" action="/submit-car-form" method="post">
+<table>
+        <tr><th>
+               <h1>Create New Car</h1>
+        </th></tr>
+                <tr>
+                        <input type="text" name="brand" id="brand" placeholder="brand">
+                        <input type="text" name="model" id="model" placeholder="model">
+                        <input type="number" name="price" id="price" placeholder="price">
+                </tr>
 
-</thead>
-    <tr>
-        <input type="text" th:name="${brand}" id="brand" placeholder="brand">
-        <input type="text" name="model" th:id="${model}" placeholder="model">
-        <input th:type="number" name="price" id="price" placeholder="price">
-</tr>
-
-
+    <div>
+        <button type="submit">Create Car</button>
+        <button type="button">Cancel!<a href="cars-main.html"></a></button>
+    </div>
 </table>
-    <div><button type="submit">Create Car</button></div>
-<div id="cancelknap">X<button type="button"><a href="/car-main"></a>Cancel</button></div>
-
 
 
 </form>
