@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<!-- Bootstrap - CSS only -->
 <head th:replace="fragments::head">
        <title>car-list</title>
 </head>
@@ -19,11 +18,11 @@
    </tr>
     </table>
 <table>
-<tr th:each="cars:${carsList}">
-        <td th:text="${cars.car_id}"/>
-        <td th:text="${cars.brand}"/>
-        <td th:text="${cars.model}"/>
-        <td th:text="${cars.price}"/>
+<tr th:each="cars:${carModels}">
+        <span th:text="${cars.car_id}"/>
+        <span th:text="${cars.brand}"/>
+        <span th:text="${cars.model}"/>
+        <span th:text="${cars.price}"/>
    </tr>
 </table>
 <a href="/cars-main">Return to menu</a>
