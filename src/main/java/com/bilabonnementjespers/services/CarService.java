@@ -16,7 +16,7 @@ public class CarService {
     @Autowired
     CarRepo carRepo;
 
-CarModel c = new CarModel();
+
 
     public List<CarModel> carModelList()
     {

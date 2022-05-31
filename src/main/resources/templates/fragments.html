@@ -1,47 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
     <head th:fragment="head">
-              <title>thymeleaf-template</title>
+        <link rel="stylesheet" href="/css/mystyle.css">
     </head>
 <body>
 
-<header th:fragment="header-fragment" id="header-fragment" class="header-fragment">
-
-       </div>
-</header>
-<table id="fragments-table">
-    <tr><th>
-        <p>customer_id</p>
-        <p>first_name</p>
-        <p>last_name</p>
-        <p>phone</p>
-        <p>adresse</p>
-    </th></tr>
-    <tr>
-        <input type="text" th:value="${customer_id}" id="customer_id">
-        <input type="text" th:value="${first_name}" id="first_name">
-        <input type="text" th:value="${last_name}" id="last_name">
-        <input type="text" th:value="${phone}" id="phone">
-        <input type="text" th:value="${adresse}" id="adresse">
-
-    </tr>
-    <tr>
-
-    </tr>
-    <tr>
-    </tr>
-
-
-</table>
-
-
-
-
-<button>Registration<a href="/reg-main"></a></button>
-        <h4><a href="/order-main">Orders</a></h4>
-        <h4><a href="/car-main">Cars</a></h4>
-
-<div id="navi-bar">
+<header th:fragment="header-fragment">
+     <div id="navi-bar">
     <ul>
         <li>
             <a href="#">
@@ -98,26 +63,22 @@
 
 
 </div>
-<footer th:fragment="footer">
+</header>
+    <footer th:fragment="footer">
     <div id="footer-flex-parent">
         <div id="flex-1">
-            <div>
-                <a href=""></a>
-            </div>
+
         </div>
         <div id="flex-2">
-            <div id="reg-link-btn">
-                <button><a href="/reg-main"></a></button>
-            </div>
-        </div>
+           </div>
         <div id="flex-3">
-            <div>
+        </div>
+            <div id="flex-4">
                 <a href="https://www.github/jesperstroebaek">• gitHub •</a>
             </div>
-            <div>
+            <div id="flex-5">
                 <a href="/contact-form">• send me an Email •</a>
             </div>
-        </div>
     </div>
     <p>- JESPER S  - DAT21C - KEA • 2022 -</p>
 </footer>
