@@ -9,36 +9,29 @@
 </header>
 
 
-<br>
-<div class="car-form-table">
-    <form id="car-form-submit-btn" action="/submit-car-form" method="post">
-<table class="header-table">
-
-    <tr><th>
       <h2>Input the data from the new car!</h2>
-    </th>
-    </tr>
-<!--  todo  th:value="${cars.brand}"
-    th:value="${cars.model}"
-    th:value="${cars.price}"
- -->
-    <tr>
-        <td><input type="text" th:name="brand" id="brand" placeholder="brand"></td>
-        <td><input type="text" th:name="model" id="model" placeholder="model"></td>
-        <td><input type="number" th:name="price" id="price" placeholder="price"></td>
-    </tr>
-
-    </table>
-        <div id="submit-carform-button"><button type="submit">Create Car</button></div>
-        <div id="cancel-btn"><button type="button"><a href="/car-main"></a>Cancel</button></div>
+<!--
+    <span th:name="${brand}" th:value="${cars.brand}"></span>
+    <span th:name="${model}" th:value="${cars.model}"></span>
+    <span th:name="${price}" th:value="${cars.price}"></span>
+  -->
 
 
+      <form th:action="@{/submit-car-form}" method="post">
+<ul><li>
+      <label for="brand">Brand</label><input type="text" th:name="brand" id="brand" placeholder="brand"></li>
+   <li>   <label for="model">Model</label><input type="text" th:name="model" id="model" placeholder="model"></li>
+    <li>  <label for="price">Price</label><input type="text" th:name="price" id="price" placeholder="price"></li>
+</li>
+<li>
+    <button type="submit">Create Car<a href="/car-list"></a></button></li>
+    <li>    <button type="button">Cancel<a href="/car-main"></a></button></li>
+</li>
+</ul>
+      </form>
 
-</form>
-</div>
 
 
-<br>
 <footer th:replace="fragments::footer">
 </footer>
 </body>

@@ -17,10 +17,7 @@ public class MainController {
     }
     @PostMapping("/submit-login")
     public String submitLogin(String username, String password){
-        if(username.equalsIgnoreCase("root") && (password.equals("open"))){
-            return "redirect:/main-page";
-        }
-        return "/login";
+        return "redirect:/main-page";
     }
     @GetMapping("/main-page")
     public String mainPage(){

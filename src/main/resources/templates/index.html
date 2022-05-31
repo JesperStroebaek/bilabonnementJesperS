@@ -4,22 +4,22 @@
     <title>index-page</title>
 </head>
 <body>
-<header th:replace="fragments::header-fragmentt">
-        <ul>
-            <li>
-                <a href="/car-main">Registration</a>
-            </li>
+<header th:replace="fragments::header-fragment">
 
-            <li>
-                <a href="/damage-main">Damage and Repairs</a>
-            </li>
-
-            <li>
-                <a href="/business-dev-main">Business Developers</a>
-            </li>
-        </ul>
 </header>
+<ul>
+    <li>
+        <a href="/car-main">Registration</a>
+    </li>
 
+    <li>
+        <a href="/car-form">Damage and Repairs</a>
+    </li>
+
+    <li>
+        <a href="/business-dev-main">Business Developers</a>
+    </li>
+</ul>
 
 
 <footer th:replace="fragments::footer">

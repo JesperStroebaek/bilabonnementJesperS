@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head th:replace="fragments::head">
-<title>cars</title>
+
+
+    <title>car-main</title>
 </head>
 <body>
-<header th:replace="fragments::header">
-    <img src="/static/img/bugPiccutout.jpg" alt="big-header-picture">
+<header th:replace="fragments::header-fragment">
 </header>
-<h1>cars page</h1>
-<a href="/car-form"><button type="button">Create Car</button></a>
-<a href="/reg-main"><button type="button">Search Car</button></a>
-<a href="/customer-main"><button type="button">Update Car</button></a>
-<a href="/"><button type="button">Delete Car</button></a>
-<footer th:replace="fragments::footer">
-    <img src="/static/img/bugPiccutoutSmall.jpg" alt="footer-picture">
+
+<footer th:replace="fragments">
 </footer>
 </body>
 </html>

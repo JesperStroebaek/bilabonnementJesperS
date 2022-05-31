@@ -1,10 +1,7 @@
 package com.bilabonnementjespers.repositorys;
 
 import com.bilabonnementjespers.models.CarModel;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -21,15 +18,16 @@ JdbcTemplate template = new JdbcTemplate();
 
       String sql = "SELECT * FROM bilabonnement.cars;";
       RowMapper<CarModel> carModelRowMapper = new BeanPropertyRowMapper<>(CarModel.class);
+      System.out.println(template.query(sql,carModelRowMapper));
       return template.query(sql,carModelRowMapper);
    }
-   public void createCar(CarModel c){
-      String sqlQuery = "INSERT INTO bilabonnement.cars " +
-              "(car_id, brand, model, price) VALUES (?,?,?,?)";
-      template.update(sqlQuery
-              ,c.getCar_id(),c.getBrand()
-              ,c.getModel(),c.getPrice());
+
+   public void createCar() {
+      String sql = "INSERT INTO bilabonnement.cars (" +
+              "car_id, brand, model, price) VALUES " +
+              "(?,?,?,?);";
+      RowMapper<CarModel> rowMapper = new BeanPropertyRowMapper<>(CarModel.class);
+      template.update(sql,rowMapper);
+
    }
-
-
 }
