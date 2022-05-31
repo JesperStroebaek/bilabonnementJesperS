@@ -1,29 +1,29 @@
 <!doctype html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head th:replace="fragments::head">
-
+    <title>index-page</title>
 </head>
 <body>
-<header id="header-list">
-    <nav class="main-nav" id="main-nav">
-        <h1 class="logo">Bilabonnement.dk</h1>
-
+<header th:replace="fragments::header-fragmentt">
         <ul>
             <li>
-                <a href="/car-form" class="active">Registration</a>
+                <a href="/car-main">Registration</a>
             </li>
 
             <li>
-                <a href="/damageAndRepair">Damage and Repairs</a>
+                <a href="/damage-main">Damage and Repairs</a>
             </li>
 
             <li>
-                <a href="/businessDeveloper">Business Developers</a>
+                <a href="/business-dev-main">Business Developers</a>
             </li>
         </ul>
-    </nav>
 </header>
 
-<footer th:replace="fragments::#footer-flex-parent"></footer>
+
+
+<footer th:replace="fragments::footer">
+
+</footer>
 </body>
 </html>

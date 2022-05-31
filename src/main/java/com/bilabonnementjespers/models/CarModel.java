@@ -1,7 +1,6 @@
 package com.bilabonnementjespers.models;
 
-import org.springframework.stereotype.Service;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 public class CarModel {
 
@@ -42,16 +41,16 @@ public class CarModel {
     private String model;
     private int price;
 
-    public CarModel() {
+    public CarModel()
+    {
 
     }
 
-    public CarModel(int car_id, String brand, String model, int price) {
+    public CarModel(int car_id, String brand,String model,int price){
         this.car_id = car_id;
         this.brand = brand;
         this.model = model;
         this.price = price;
-
     }
 
 }

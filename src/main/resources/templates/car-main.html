@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head th:replace="fragments::head">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-                    <title>cars</title>
+<title>cars</title>
 </head>
 <body>
+<header th:replace="fragments::header">
+    <img src="/static/img/bugPiccutout.jpg" alt="big-header-picture">
+</header>
 <h1>cars page</h1>
 <a href="/car-form"><button type="button">Create Car</button></a>
-<a href=""><button type="button">Search Car</button></a>
-<a href=""><button type="button">Update Car</button></a>
-<a href=""><button type="button">Delete Car</button></a>
+<a href="/reg-main"><button type="button">Search Car</button></a>
+<a href="/customer-main"><button type="button">Update Car</button></a>
+<a href="/"><button type="button">Delete Car</button></a>
+<footer th:replace="fragments::footer">
+    <img src="/static/img/bugPiccutoutSmall.jpg" alt="footer-picture">
+</footer>
 </body>
 </html>

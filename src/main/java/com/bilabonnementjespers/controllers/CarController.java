@@ -18,9 +18,15 @@ public class CarController {
     @GetMapping("/cars-main")
     public String carsMain() {
         return "/cars-main";
-    }@GetMapping("/car-form")
+    }
+    @GetMapping("/car-form")
     public String carForm() {
         return "/car-form";
+    }
+    @PostMapping("/car-form")
+    public String carList(@ModelAttribute CarModel carsList){
+        carService.createCar(carsList);
+        return "redirect:/car-list";
     }
     @PostMapping("/submit-car-form")
     public String createCar(Model model) {
@@ -33,9 +39,5 @@ public class CarController {
     public String carList() {
         return "/car-list";
         }
-    @PostMapping("/car-form")
-    public String carList(@ModelAttribute CarModel carsList){
-        carService.createCar(carsList);
-        return "redirect:/car-list";
-    }
+
 }

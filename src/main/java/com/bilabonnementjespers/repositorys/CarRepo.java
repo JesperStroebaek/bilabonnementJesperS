@@ -12,8 +12,8 @@ import java.util.List;
 @Repository
 public class CarRepo {
 
-//@Autowired
-  // todo      JdbcTemplate template;
+
+
 
 JdbcTemplate template = new JdbcTemplate();
 
@@ -26,8 +26,9 @@ JdbcTemplate template = new JdbcTemplate();
    public void createCar(CarModel c){
       String sqlQuery = "INSERT INTO bilabonnement.cars " +
               "(car_id, brand, model, price) VALUES (?,?,?,?)";
-
-      template.update(sqlQuery,c.getCar_id(),c.getBrand(),c.getModel(),c.getPrice());
+      template.update(sqlQuery
+              ,c.getCar_id(),c.getBrand()
+              ,c.getModel(),c.getPrice());
    }
 
 
