@@ -4,7 +4,6 @@ byJesperS
 
 Exams 2 semester
 
-BackEnd:
 
 # FullStack Application.
 
