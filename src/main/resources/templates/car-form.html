@@ -2,10 +2,10 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head th:replace="fragments::head">
 
-    <title>create-car</title>
+    <title>car-list</title>
 </head>
 <body>
-<header th:replace="fragments::header">
+<header th:replace="fragments::header-fragment">
 </header>
 
 
@@ -17,7 +17,7 @@
   -->
 
 
-              <form th:action="@{/car-form}" action="/car-form" method="post">
+      <form th:action="@{/car-form}" action="/car/car-form" method="post">
         <ul>
             <li>
               <label for="brand">Brand</label><input type="text" th:name="brand" id="brand" placeholder="brand">

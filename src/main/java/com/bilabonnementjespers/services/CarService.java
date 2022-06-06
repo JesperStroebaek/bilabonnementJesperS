@@ -18,9 +18,6 @@ public class CarService {
         return carRepo.carModelList();
     }
 
-    public void createCar() {
-        carRepo.createCar();
-    }
 }
 
 
