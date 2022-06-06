@@ -15,26 +15,23 @@ public class CarController {
 
 
 
-    @GetMapping("/car-form")
-    public String carForm() {
-        return "/car-form";
+    @GetMapping("/car-list") // todo forklar endpoint
+    public String carList(org.springframework.ui.Model model) // todo forklar model
+    {
+        List<CarModel> carModelList = carService.serviceList();
+        model.addAttribute("cars", carModelList); // todo forklar
+        return "/car-list";
     }
-    CarModel carModel = new com.bilabonnementjespers.models.CarModel();
-    @PostMapping("/car-form")
-    @ResponseBody
+
+/*
+    @PostMapping("/car/car-list")
     public List<CarModel> carForm(
-            @RequestParam(value = "brand") String brand
-            , @RequestParam(value = "model") String model
-            , @RequestParam(value = "price") int price) {
-        System.out.println(brand+price+model);
-        String fraCarForm = (carModel.getCar_id()+carModel.getBrand()+carModel.getModel());
-        return fraCarForm;
-    }
-    @GetMapping("/car-list")
+        }
+    @GetMapping("/car/car-list")
     public void carList(){
        List<CarModel> carModels = carService.serviceList();
         System.out.println(carModels);
         carService.createCar();
     }
-
+*/
 }

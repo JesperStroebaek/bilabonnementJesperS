@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head th:replace="fragments::head">
-       <title>car-list</title>
+    <title>car-list</title>
 </head>
 <body>
-<header th:replace="fragments::header">
+<header th:replace="fragments::header-fragment">
 </header>
 
 
- 
-
+<!--
      <p th:text="${cars.car_id}">id</p>
      <p th:text="${cars.brand}">brand</p>
      <p th:text="${cars.model}">model</p>
      <p th:text="${cars.price}">price</p>
-
+-->
 
 
 <table>
-<tr th:each="cars:${carModels}">
-        <span th:text="${cars.car_id}"/>
-        <span th:text="${cars.brand}"/>
-        <span th:text="${cars.model}"/>
-        <span th:text="${cars.price}"/>
-   </tr>
+    <thead>
+    <tr>
+        <th>Car ID</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+
+    <tr th:each="cars:${carModels}">
+        <td th:text="${cars.car_id}"/>
+        <td th:text="${cars.brand}"/>
+        <td th:text="${cars.model}"/>
+        <td th:text="${cars.price}"/>
+    </tr>
 </table>
 
 
-
-<a href="/cars-main">Return to menu</a>
-
+<a href="/reg-main">Return to menu</a>
 
 
 <footer th:replace="fragments::footer">
