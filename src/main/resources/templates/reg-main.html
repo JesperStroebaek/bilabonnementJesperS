@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head th:replace="fragments::head">
-
-    <title>registration</title>
-</head>
+<head th:replace="fragments::head"><title>registration</title></head>
 <body>
 <h1>reg-main</h1>
 <header th:replace="fragments::header"></header>
-<button type="button">Create New Car<a href="/car-form"></a></button>
-<button type="button">Main Car Menu<a href="/car-main-page"></a></button>
+<a href="/car-form"><button type="button">Create New Car</button></a>
+<a href="/main-page"><button type="button">Main Menu</button></a>
 <footer th:replace="fragments::footer">
 </footer>
 </body>

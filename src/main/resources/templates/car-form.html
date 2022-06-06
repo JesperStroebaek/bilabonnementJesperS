@@ -17,18 +17,26 @@
   -->
 
 
-      <form th:action="@{/submit-car-form}" method="post">
-<ul><li>
-      <label for="brand">Brand</label><input type="text" th:name="brand" id="brand" placeholder="brand"></li>
-   <li>   <label for="model">Model</label><input type="text" th:name="model" id="model" placeholder="model"></li>
-    <li>  <label for="price">Price</label><input type="text" th:name="price" id="price" placeholder="price"></li>
-</li>
-<li>
-    <button type="submit">Create Car<a href="/car-list"></a></button></li>
-    <li>    <button type="button">Cancel<a href="/car-main"></a></button></li>
-</li>
-</ul>
-      </form>
+              <form th:action="@{/car-form}" action="/car-form" method="post">
+        <ul>
+            <li>
+              <label for="brand">Brand</label><input type="text" th:name="brand" id="brand" placeholder="brand">
+            </li>
+            <li>
+               <label for="model">Model</label><input type="text" th:name="model" id="model" placeholder="model">
+            </li>
+            <li>
+                <label for="price">Price</label><input type="text" th:name="price" id="price" placeholder="price">
+            </li>
+
+            <li>
+                <button type="submit">Create Car</button>
+            </li>
+            <li>
+                <a href="/car-main"><button type="button">Cancel</button></a>
+            </li>
+        </ul>
+</form>
 
 
 

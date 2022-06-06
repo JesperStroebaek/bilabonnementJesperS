@@ -8,15 +8,15 @@
 </header>
 
 
-    <table id="car-list-table">
-   <tr><th>
-     <p>tabel</p>
-     <p>tabel</p>
-     <p>tabel</p>
-     <p>tabel</p>
-   </th>
-   </tr>
-    </table>
+ 
+
+     <p th:text="${cars.car_id}">id</p>
+     <p th:text="${cars.brand}">brand</p>
+     <p th:text="${cars.model}">model</p>
+     <p th:text="${cars.price}">price</p>
+
+
+
 <table>
 <tr th:each="cars:${carModels}">
         <span th:text="${cars.car_id}"/>
@@ -25,6 +25,9 @@
         <span th:text="${cars.price}"/>
    </tr>
 </table>
+
+
+
 <a href="/cars-main">Return to menu</a>
 
 

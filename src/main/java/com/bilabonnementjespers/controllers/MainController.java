@@ -12,27 +12,29 @@ public class MainController {
         return "/index";
     }
     @GetMapping("/login")
-    public String loginPage(){
+    public String loginPage() {
         return "/login";
     }
-    @PostMapping("/submit-login")
-    public String submitLogin(String username, String password){
-        return "redirect:/main-page";
+    @PostMapping("/main-page")
+    public String mainPage(){
+        return "/main-page";
     }
     @GetMapping("/main-page")
-    public String mainPage(){
+    public String getMainPage(){
         return "/main-page";
     }
     @GetMapping("/reg-main")
     public String registrationMain(){
         return "/reg-main";
     }
-
-    @GetMapping("/customer-main")
-    public String customerMain(){
-        return "/customer-main";
+    @GetMapping("/damage-main")
+    public String damageMain(){
+        return "/damage-main";
     }
-
+    @GetMapping("/business-dev-main")
+    public String businessMain(){
+        return "/business-dev-main";
+    }
 
 
 }
