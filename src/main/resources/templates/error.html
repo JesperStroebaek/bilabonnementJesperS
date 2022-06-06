@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head th:replace="fragments::head">
-    <meta charset="UTF-8">
     <title>Error-page</title>
 </head>
 <body>
 <header th:replace="fragments::header-fragment"></header>
+        <div class="error-page">
             <h1>Something went wrong.!</h1>
-            <h3>the page you just navigated to is either out of order</h3>
-            <h5>or has not yet been implemented.</h5>
-<footer th:replace="fragments::footer"></footer>
+
+                <h3>the page you just navigated to is either out of order</h3>
+                <h3>or has not yet been implemented.</h3>
+        </div>
+<a href="login.html">Return to login-page</a>
+            <footer th:replace="fragments::footer"></footer>
 </body>
 </html>

@@ -12,36 +12,29 @@ import java.util.List;
 public class CarController {
     @Autowired
     CarService carService;
-    @Autowired
+
 
 
     @GetMapping("/car-form")
     public String carForm() {
         return "/car-form";
     }
-    /*
-    @GetMapping("submit-car-form")
-    public String carList2(Model model){
-    List<CarModel> carModels = carService.serviceList();
-        model.addAttribute("cars",carModels);
-        System.out.println(carModels);
-        return "/car-list";
-    }*/
-
-    @PostMapping("/submit-car-form")
+    CarModel carModel = new com.bilabonnementjespers.models.CarModel();
+    @PostMapping("/car-form")
     @ResponseBody
-    public String carForm(@RequestParam(value = "car_id") String car_id
-            , @RequestParam(value = "brand") String brand
+    public List<CarModel> carForm(
+            @RequestParam(value = "brand") String brand
             , @RequestParam(value = "model") String model
-            , @RequestParam(value = "price") String price) {
-        System.out.println(car_id+brand+price+model);
-        return "/car-list";
+            , @RequestParam(value = "price") int price) {
+        System.out.println(brand+price+model);
+        String fraCarForm = (carModel.getCar_id()+carModel.getBrand()+carModel.getModel());
+        return fraCarForm;
     }
     @GetMapping("/car-list")
     public void carList(){
        List<CarModel> carModels = carService.serviceList();
         System.out.println(carModels);
         carService.createCar();
-
     }
+
 }

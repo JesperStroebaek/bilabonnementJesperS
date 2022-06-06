@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>contact-form</title>
-</head>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="fragments::head"><title>contact-info</title></head>
 <body>
-<header th:replace="fragments::header">
-    </header>
-
-
-
-<footer th:replace="fragments::footer">
-    </footer>
+<header th:replace="fragments::header-fragment"></header>
+<div class="contact-form">
+    <form action="main-page.html">
+        <table>
+            <tr><th>
+                Send me a message
+            </th></tr>
+            <tr>Message-input-field</tr>  <!-- todo contact form table -->
+        </table>
+    </form>
+</div>
+<footer th:replace="fragments::footer"></footer>
 </body>
 </html>
