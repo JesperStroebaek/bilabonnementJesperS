@@ -1,4 +1,19 @@
-.flex-header{
+body{
+    background-color: cadetblue;
+
+}
+
+#flex-header{
     display: flex;
     flex-direction: row;
+    border: black solid 2px;
+}
+.footer-flex{
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    border: black solid 2px;
+}
+.car-form{
+    border: black solid 5px;
 }
