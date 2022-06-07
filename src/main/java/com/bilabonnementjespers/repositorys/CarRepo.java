@@ -13,22 +13,22 @@ import java.util.List;
 public class CarRepo {
 
 @Autowired
-JdbcTemplate template;
+JdbcTemplate jdbcTemplate;
 
    public List<CarModel> carModelList(){
       String sql = "SELECT * FROM bilabonnement.cars";
       RowMapper<CarModel> rowMapper = new BeanPropertyRowMapper<>(CarModel.class);
-      return template.query(sql, rowMapper);
+      return jdbcTemplate.query(sql, rowMapper);
    }
-/*
-   public void createCar() {
+
+   public void createCar(CarModel newCar) {
       String sql = "INSERT INTO bilabonnement.cars (" +
               "car_id, brand, model, price) VALUES " +
-              "(?,?,?,?);";
-      RowMapper<CarModel> rowMapper = new BeanPropertyRowMapper<>(CarModel.class);
-      template.update(sql,rowMapper);
+              "(?,?,?,?)";
+      jdbcTemplate.update(sql);
+      System.out.println(jdbcTemplate.update(sql));
 
    }
-   */
+
 
 }

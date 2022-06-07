@@ -1,8 +1,23 @@
 package com.bilabonnementjespers.models;
 
-import org.springframework.web.bind.annotation.RequestParam;
-
 public class CarModel {
+
+    private int car_id;
+    private String brand;
+    private String model;
+    private int price;
+
+    public CarModel()
+    {
+
+    }
+
+    public CarModel(int car_id, String brand,String model,int price){
+        this.car_id = car_id;
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+    }
 
     public int getCar_id() {
         return car_id;
@@ -36,21 +51,5 @@ public class CarModel {
         this.price = price;
     }
 
-    private int car_id;
-    private String brand;
-    private String model;
-    private int price;
-
-    public CarModel()
-    {
-
-    }
-
-    public CarModel(int car_id, String brand,String model,int price){
-        this.car_id = car_id;
-        this.brand = brand;
-        this.model = model;
-        this.price = price;
-    }
 
 }

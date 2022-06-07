@@ -6,40 +6,29 @@
 <body>
 <header th:replace="fragments::header-fragment">
 </header>
+        <table>
+            <thead>
+                 <tr>
+                     <th>Car ID</th>
+                     <th>Brand</th>
+                     <th>Model</th>
+                     <th>Price</th>
+                 </tr>
+            </thead>
+
+                <tr th:each="carModelList:${cars}">
+                    <td th:text="${carModelList.car_id}"/>
+                    <td th:text="${carModelList.brand}"/>
+                    <td th:text="${carModelList.model}"/>
+                    <td th:text="${carModelList.price}"/>
+                </tr>
+        </table>
 
 
-<!--
-     <p th:text="${cars.car_id}">id</p>
-     <p th:text="${cars.brand}">brand</p>
-     <p th:text="${cars.model}">model</p>
-     <p th:text="${cars.price}">price</p>
--->
-
-
-<table>
-    <thead>
-    <tr>
-        <th>Car ID</th>
-        <th>Brand</th>
-        <th>Model</th>
-        <th>Price</th>
-    </tr>
-    </thead>
-
-    <tr th:each="cars:${carModels}">
-        <td th:text="${cars.car_id}"/>
-        <td th:text="${cars.brand}"/>
-        <td th:text="${cars.model}"/>
-        <td th:text="${cars.price}"/>
-    </tr>
-</table>
-
-
-<a href="/reg-main">Return to menu</a>
+        <a href="/reg-main">Return to menu</a>
 
 
 <footer th:replace="fragments::footer">
-
 </footer>
 </body>
 </html>

@@ -17,7 +17,7 @@
   -->
 
 
-      <form th:action="@{/car-form}" action="/car/car-form" method="post">
+      <form action="/car-form" method="post">
         <ul>
             <li>
               <label for="brand">Brand</label><input type="text" th:name="brand" id="brand" placeholder="brand">
@@ -33,7 +33,7 @@
                 <button type="submit">Create Car</button>
             </li>
             <li>
-                <a href="/car-main"><button type="button">Cancel</button></a>
+                <a href="/reg-main"><button type="button">Cancel</button></a>
             </li>
         </ul>
 </form>
