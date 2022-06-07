@@ -25,8 +25,8 @@ JdbcTemplate jdbcTemplate;
       String sql = "INSERT INTO bilabonnement.cars (" +
               "car_id, brand, model, price) VALUES " +
               "(?,?,?,?)";
-      jdbcTemplate.update(sql);
-      System.out.println(jdbcTemplate.update(sql));
+      jdbcTemplate.update(sql, newCar.getCar_id(),newCar.getBrand(),newCar.getModel()
+      ,newCar.getPrice());
 
    }
 
