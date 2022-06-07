@@ -10,36 +10,35 @@
 
 
       <h2>Input the data from the new car!</h2>
-<!--
-    <span th:name="${brand}" th:value="${cars.brand}"></span>
-    <span th:name="${model}" th:value="${cars.model}"></span>
-    <span th:name="${price}" th:value="${cars.price}"></span>
-  -->
 
 
       <form action="/car-form" method="post">
-        <ul>
-            <li>
-              <label for="brand">Brand</label>
+        <table>
+            <thead>
+            <tr>
+                <td>Car Brand</td>
+                <td>Model specs</td>
+                <td>Rental Price</td>
+            </tr>
+            </thead>
+            <tr>
                 <input type="text" th:name="brand" id="brand" placeholder="brand">
-            </li>
-            <li>
-               <label for="model">Model</label>
+            </tr>
+            <tr>
                 <input type="text" th:name="model" id="model" placeholder="model">
-            </li>
-            <li>
-                <label for="price">Price</label>
+            </tr>
+            <tr>
                 <input type="text" th:name="price" id="price" placeholder="price">
-            </li>
+            </tr>
 
-            <li>
+            <tr>
                 <button type="submit">Create Car</button>
-            </li>
-            <li>
+            </tr>
+            <tr>
                 <a href="/reg-main"><button type="button">Cancel</button></a>
-            </li>
-        </ul>
-</form>
+            </tr>
+        </table>
+      </form>
 
 
 
