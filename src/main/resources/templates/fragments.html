@@ -6,38 +6,37 @@
         <title>template-thymeleaf</title>
     </head>
 <body>
-    <header th:fragment="header-fragment">
-
-        <div id="flex-header">
-                <div>
-                    <a href="/main-page"><img src="img/bugPiccutout.jpg" alt="logopic"></a>
-                </div>
-                <div id="flex-head-4">
-                    <a href="/business-dev-main"><button type="button">Business Developer</button></a>
-                </div>
-                <div id="flex-head-2">
-                    <a href="/reg-main"><button type="button">Registration</button></a>
-                </div>
-                <div id="flex-head-3">
-                    <a href="/damage-main"><button type="button">Damage&Repairs</button></a>
-                </div>
+<header th:fragment="header-fragment" class="header">
+        <div class="header-pic">
+                <a href="/main-page"><img src="img/bugPiccutout.jpg" alt="logopic"></a>
         </div>
-    </header>
+        <div class="flex-header">
+            <div class="flex-head-busi-btn">
+                    <a href="/business-dev-main"><button type="button">Business Developer</button></a>
+            </div>
+            <div class="flex-head-reg-btn">
+                    <a href="/reg-main"><button type="button">Registration</button></a>
+            </div>
+            <div class="flex-head-dam-btn">
+                    <a href="/damage-main"><button type="button">Damage&Repairs</button></a>
+            </div>
+        </div>
+</header>
 
-    <footer th:fragment="footer">
+<footer th:fragment="footer" class="footer">
         <div class="footer-flex">
-                    <div id="flex-1">
-                        <p>- JESPER S  - DAT21C - KEA • 2022 -</p>
-                    </div>
-                    <div id="flex-2">
-                        <button type="button">• gitHub •<a href="https://www.github.com/jesperstroebaek"></a></button>
-                    </div>
-                    <div id="flex-3">
-                        <button type="button">• Contact info •<a href="/contact-form"></a></button>
-                    </div>
-                    <div id="flex-4">
-                        <button type="button">Log Out<a href="/logout"></a></button>
-                    </div>
+            <div id="flex-2">
+                <button type="button">• gitHub •<a href="https://www.github.com/jesperstroebaek"></a></button>
+            </div>
+            <div id="flex-3">
+                <button type="button">• Contact info •<a href="/contact-form"></a></button>
+            </div>
+            <div id="flex-4">
+                <button type="button">Log Out<a href="/logout"></a></button>
+            </div>
+            <div id="flex-foot-info">
+                <p>- JESPER S  - DAT21C - KEA • 2022 -</p>
+            </div>
         </div>
     </footer>
 </body>

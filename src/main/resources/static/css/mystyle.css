@@ -1,17 +1,21 @@
 body{
-    background-color: cadetblue;
-
+    border: black solid 2px;
+    padding: 10px;
 }
 
-#flex-header{
+.header-pic{
+    position: absolute;
+    width: fit-content;
+}
+.flex-header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border: black solid 2px;
+
 }
 .footer-flex{
     display: flex;
     flex-direction: row;
-    position: sticky;
     border: black solid 2px;
 }
 .car-form{

@@ -7,20 +7,13 @@
 <body>
 <header th:replace="fragments::header-fragment">
 </header>
-
-
+<div class="car-form">
       <h2>Input the data from the new car!</h2>
 
 
       <form action="/car-form" method="post">
-        <table class="car-form">
-            <thead>
-            <tr>
-                <td>Car Brand</td>
-                <td>Model specs</td>
-                <td>Rental Price</td>
-            </tr>
-            </thead>
+        <table>
+
             <tr>
                 <input type="text" th:name="brand" id="brand" placeholder="brand">
             </tr>
@@ -39,6 +32,7 @@
             </tr>
         </table>
       </form>
+</div>
 
 
 
