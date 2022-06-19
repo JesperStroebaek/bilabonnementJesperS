@@ -2,10 +2,12 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head th:replace="fragments::head"><title>registration</title></head>
 <body>
-<header th:replace="fragments::header-fragment"></header>
-<a href="/car-form"><button type="button">Create New Car</button></a>
-<a href="/car-list"><button type="button">Car List</button></a>
-<footer th:replace="fragments::footer">
-</footer>
+    <header th:replace="fragments::header-fragment"></header>
+        <div class="page-mid">
+            <button><a href="/car-form" type="button">CreateNewCar</a></button>
+            <button><a href="/car-list" type="button">CarList</a></button>
+            <button><a href="/search-car-form">UpdateOrDeleteCar</a></button>
+        </div>
+    <footer th:replace="fragments::footer"></footer>
 </body>
 </html>
