@@ -31,5 +31,8 @@ public class CarController {
         carService.createCar(newCar);
         return "redirect:/car-list";
     }
-
+    @GetMapping("/search-car-form")
+    public String searchCar(){
+        return "/search-car-form";
+    }
 }
