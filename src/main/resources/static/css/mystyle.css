@@ -1,23 +1,36 @@
+
 body{
+    background-color: gray;
     border: black solid 2px;
-    margin: fill;
+    text-decoration: none;
 }
 
 .header-pic{
-    position: absolute;
-    width: fit-content;
-    margin-bottom: 5px;
+    border: darkslategray 5px;
 }
+
 .flex-header{
     display: flex;
-    flex-direction: column;
+    flex: 1;
     border: black solid 2px;
+    padding: 20px;
+
 
 }
+
+.page-mid a{
+    text-decoration: none;
+}
+.page-mid .login-btn{
+    padding: 10px;
+}
+
+
+
 .footer-flex{
     display: flex;
-    flex-direction: row;
     border: black solid 2px;
+    padding: 20px;
 }
 .car-form{
     border: black solid 5px;

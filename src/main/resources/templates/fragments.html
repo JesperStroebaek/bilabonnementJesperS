@@ -5,40 +5,49 @@
             <link rel="stylesheet" type="text/css" href="css/mystyle.css">
         <title>template-thymeleaf</title>
     </head>
-<body>
-<header th:fragment="header-fragment" class="header">
-
+    <body>
+    <header th:fragment="header-fragment" class="header">
+        <div class="header-pic">
+            <a href="/main-page"><img src="img/bugPiccutout.jpg" alt="logopic"></a>
+        </div>
         <div class="flex-header">
             <div class="flex-head-busi-btn">
-                    <a href="/business-dev-main"><button type="button">Business Developer</button></a>
+                <a href="/business-dev-main"><button type="button">BusinessDevelopment</button></a>
             </div>
             <div class="flex-head-reg-btn">
-                    <a href="/reg-main"><button type="button">Registration</button></a>
+                <a href="/reg-main"><button type="button">Registration</button></a>
             </div>
             <div class="flex-head-dam-btn">
-                    <a href="/damage-main"><button type="button">Damage&Repairs</button></a>
+                <a href="/damage-main"><button type="button">Damage&Repair</button></a>
             </div>
         </div>
-    <div class="header-pic">
-        <a href="/main-page"><img src="img/bugPiccutout.jpg" alt="logopic"></a>
-    </div>
-</header>
 
-<footer th:fragment="footer" class="footer">
+    </header>
+    <div class="page-mid">
+
+
+    <p>whatever page your on.. this is FRAGMENTS.HTML</p>
+
+
+    </div>
+    <footer th:fragment="footer" class="footer">
         <div class="footer-flex">
             <div id="flex-2">
-                <button type="button">• gitHub •<a href="https://www.github.com/jesperstroebaek"></a></button>
+                <button type="button">GithubLink<a href="https://www.github.com/jesperstroebaek"></a></button>
             </div>
             <div id="flex-3">
-                <button type="button">• Contact info •<a href="/contact-form"></a></button>
+                <button type="button">ContactInfo<a href="/contact-form"></a></button>
             </div>
             <div id="flex-4">
-                <button type="button">Log Out<a href="/logout"></a></button>
-            </div>
-            <div id="flex-foot-info">
-                <p>- JESPER S  - DAT21C - KEA • 2022 -</p>
+                <button type="button">LogOut<a href="/logout"></a></button>
             </div>
         </div>
+        <div id="flex-foot-info">
+            <p>- JESPER S  - DAT21C - KEA • 2022 -</p>
+        </div>
+        <div class="header-pic">
+            <a href="/main-page"><img src="img/bugPiccutout.jpg" alt="logopic"></a>
+        </div>
     </footer>
-</body>
+    </body>
 </html>
