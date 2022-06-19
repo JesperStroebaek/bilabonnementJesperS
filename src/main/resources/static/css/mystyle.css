@@ -1,11 +1,12 @@
 body{
     border: black solid 2px;
-    padding: 10px;
+    margin: fill;
 }
 
 .header-pic{
     position: absolute;
     width: fit-content;
+    margin-bottom: 5px;
 }
 .flex-header{
     display: flex;

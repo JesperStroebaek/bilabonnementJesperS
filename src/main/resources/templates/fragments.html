@@ -7,9 +7,7 @@
     </head>
 <body>
 <header th:fragment="header-fragment" class="header">
-        <div class="header-pic">
-                <a href="/main-page"><img src="img/bugPiccutout.jpg" alt="logopic"></a>
-        </div>
+
         <div class="flex-header">
             <div class="flex-head-busi-btn">
                     <a href="/business-dev-main"><button type="button">Business Developer</button></a>
@@ -21,6 +19,9 @@
                     <a href="/damage-main"><button type="button">Damage&Repairs</button></a>
             </div>
         </div>
+    <div class="header-pic">
+        <a href="/main-page"><img src="img/bugPiccutout.jpg" alt="logopic"></a>
+    </div>
 </header>
 
 <footer th:fragment="footer" class="footer">
