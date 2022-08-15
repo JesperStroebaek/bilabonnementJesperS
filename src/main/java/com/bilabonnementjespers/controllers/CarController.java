@@ -21,7 +21,6 @@ public class CarController {
         return "/car-list";
     }
 
-
     @GetMapping("/car-form")
     public String carForm(){
         return "/car-form";
@@ -32,9 +31,18 @@ public class CarController {
         carService.createCar(newCar);
         return "redirect:/car-list";
     }
+
+
+    @GetMapping("/search-car-form")
+    public String searchForm(){
+        return "/search-car-form";
+    }
+
     @GetMapping("/search-car-result/{car_id}")
-    public String searchCar(@PathVariable ("car_id") int car_id, Model model){
-        model.addAttribute("carById",carService.searchCar(car_id));
+    public String searchCarResult(@PathVariable ("car_id") int car_id, Model model){
+        model.addAttribute("cars", carService.searchCar(car_id));
         return "/search-car-result";
     }
+
+
 }
