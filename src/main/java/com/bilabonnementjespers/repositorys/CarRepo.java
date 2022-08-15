@@ -29,6 +29,12 @@ JdbcTemplate jdbcTemplate;
       ,newCar.getPrice());
 
    }
+   public CarModel searchCarById(int car_id){
+      String sql = "SELECT * FROM bilabonnement.cars WHERE car_id = ?";
+      RowMapper<CarModel> carIdRowmapper = new org.springframework.jdbc.core.BeanPropertyRowMapper<>(CarModel.class);
+      CarModel c = jdbcTemplate.queryForObject(sql, carIdRowmapper, car_id);
+      return c;
+   }
 
 
 }
