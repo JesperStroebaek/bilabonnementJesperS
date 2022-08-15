@@ -26,14 +26,23 @@
     <div class="page-mid">
 
 
-    <h3>whatever page you're on.. this is FRAGMENTS.HTML</h3>
+        <h3>whatever page you're on.. this is FRAGMENTS.HTML</h3>
 
 
     </div>
+
+
     <footer th:fragment="footer" class="footer">
         <div class="footer-flex">
+            <div class="flex-foot-info">
+                <p>- Jesper Strøbæk - DAT21C 2.Semester - KEA • 2022 -</p>
+            </div>
+
+
             <div class="flex-foot-btn-githublink">
-                <button type="button">GithubLink<a href="https://www.github.com/jesperstroebaek"></a></button>
+                <button type="button">GithubLink
+                    <a href="https://www.github.com/jesperstroebaek"></a>
+                </button>
             </div>
             <div class="flex-foot-btn-contactinfo">
                 <button type="button">ContactInfo<a href="/contact-form"></a></button>
@@ -41,12 +50,6 @@
             <div class="flex-foot-btn-logout">
                 <button type="button">LogOut<a href="/logout"></a></button>
             </div>
-        </div>
-        <div class="flex-foot-info">
-            <p>- JESPER S  - DAT21C - KEA • 2022 -</p>
-        </div>
-        <div class="header-pic">
-            <a href="/main-page"><img src="img/bugPiccutout.jpg" alt="logopic"></a>
         </div>
     </footer>
     </body>

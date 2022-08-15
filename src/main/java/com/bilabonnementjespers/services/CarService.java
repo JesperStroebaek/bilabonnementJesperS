@@ -25,8 +25,13 @@ public class CarService {
 
     public CarModel searchCar(int car_id){
 
-        return carRepo.searchCarById(car_id);
-
+        return carRepo.searchCar(car_id);
+    }
+    public void deleteCar(int car_id){
+        carRepo.deleteCar(car_id);
+    }
+    public void updateCar(int car_id, CarModel c){
+        carRepo.updateCar(car_id,c);
     }
 
 }

@@ -6,23 +6,12 @@
 <body>
 <header th:replace="fragments::header-fragment"></header>
 <div class="page-mid">
-  <table class="car-list-table">
-    <thead>
-    <tr>
-      <th>Car ID</th>
-      <th>Brand</th>
-      <th>Model</th>
-      <th>Price</th>
-    </tr>
-    </thead>
 
-    <tr th:each="carModelList:${cars}">
-      <td th:text="${carModelList.car_id}"/>
-      <td th:text="${carModelList.brand}"/>
-      <td th:text="${carModelList.model}"/>
-      <td th:text="${carModelList.price}"/>
-    </tr>
-  </table>
+        <span th:text="${cars.car_id}"/>
+        <span th:text="${cars.brand}"/>
+        <span th:text="${cars.model}"/>
+        <span th:text="${cars.price}"/>
+
 
 
   <button><a href="/reg-main">Return to menu</a></button>

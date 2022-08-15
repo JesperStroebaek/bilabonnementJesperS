@@ -12,34 +12,27 @@
             Fill in known data and hit 'find car'..
         </p>
 
-        <form class="car-search-form" action="/car-search-form" method="post">
 
-        <table>
-
+        <form class="car-search-form" action="/search-car-result" method="get">
+            <table>
             <tr>
-                <input type="text" th:name="brand" id="brand" placeholder="brand">
-            </tr>
-            <tr>
-                <input type="text" th:name="model" id="model" placeholder="model">
-            </tr>
-            <tr>
-                <input type="text" th:name="price" id="price" placeholder="price">
+                <input type="text" th:name="car_id" id="car_id" placeholder="car-id">
             </tr>
 
             <tr>
                 <button type="submit">Find Car</button>
             </tr>
-        </form>
-<!--
+
             <tr th:each="carModelList:${cars}">
-                <td th:text="${carModelList.car_id}"/>
-                <td th:text="${carModelList.brand}"/>
-                <td th:text="${carModelList.model}"/>
-                <td th:text="${carModelList.price}"/>
+                <td th:text="${cars.car_id}"/>
+                <td th:text="${cars.brand}"/>
+                <td th:text="${cars.model}"/>
+                <td th:text="${cars.price}"/>
             </tr>
 
--->
+
         </table>
+        </form>
 
 
         <button><a href="/reg-main">Return to menu</a></button>

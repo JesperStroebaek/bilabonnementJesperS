@@ -29,11 +29,19 @@ JdbcTemplate jdbcTemplate;
       ,newCar.getPrice());
 
    }
-   public CarModel searchCarById(int car_id){
-      String sql = "SELECT * FROM bilabonnement.cars WHERE car_id = ?";
-      RowMapper<CarModel> carIdRowmapper = new org.springframework.jdbc.core.BeanPropertyRowMapper<>(CarModel.class);
+   public CarModel searchCar(int car_id){
+      String sql = "SELECT * FROM bilabonnement.cars WHERE car_id = ?;";
+      RowMapper<CarModel> carIdRowmapper = new BeanPropertyRowMapper<>(CarModel.class);
       CarModel c = jdbcTemplate.queryForObject(sql, carIdRowmapper, car_id);
       return c;
+   }
+   public boolean deleteCar(int car_id){
+      String sql = "DELETE FROM bilabonnement.cars WHERE car_id = ?";
+      return jdbcTemplate.update(sql, car_id) > 0;
+   }
+   public void updateCar(int car_id, CarModel c){
+      String sql = "UPDATE bilabonnement.cars SET car_id = ?, brand = ?, model = ?, price = ?";
+      jdbcTemplate.update(sql,c.getCar_id(),c.getBrand(),c.getModel(),c.getPrice());
    }
 
 
