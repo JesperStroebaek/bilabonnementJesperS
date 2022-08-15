@@ -6,7 +6,46 @@
 <body>
 <header th:replace="fragments::header-fragment"></header>
 <div class="page-mid">
-   <p>search-car-form</p>
+   <h3>search-car-form</h3>
+    <div class="page-mid">
+        <p>
+            Fill in known data and hit 'find car'..
+        </p>
+
+        <form class="car-search-form" action="/car-search-form" method="post">
+
+        <table>
+
+            <tr>
+                <input type="text" th:name="brand" id="brand" placeholder="brand">
+            </tr>
+            <tr>
+                <input type="text" th:name="model" id="model" placeholder="model">
+            </tr>
+            <tr>
+                <input type="text" th:name="price" id="price" placeholder="price">
+            </tr>
+
+            <tr>
+                <button type="submit">Find Car</button>
+            </tr>
+        </form>
+<!--
+            <tr th:each="carModelList:${cars}">
+                <td th:text="${carModelList.car_id}"/>
+                <td th:text="${carModelList.brand}"/>
+                <td th:text="${carModelList.model}"/>
+                <td th:text="${carModelList.price}"/>
+            </tr>
+
+-->
+        </table>
+
+
+        <button><a href="/reg-main">Return to menu</a></button>
+
+    </div>
+
 
 </div>
 <footer th:replace="fragments::footer"></footer>

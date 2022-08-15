@@ -26,13 +26,15 @@ public class CarController {
     public String carForm(){
         return "/car-form";
         }
+
     @PostMapping("/car-form")
     public String createCar(@ModelAttribute CarModel newCar){
         carService.createCar(newCar);
         return "redirect:/car-list";
     }
-    @GetMapping("/search-car-form")
-    public String searchCar(){
-        return "/search-car-form";
+    @GetMapping("/search-car-result/{car_id}")
+    public String searchCar(@PathVariable ("car_id") int car_id, Model model){
+        model.addAttribute("carById",carService.searchCar(car_id));
+        return "/search-car-result";
     }
 }
