@@ -34,13 +34,15 @@ public class CarController {
 
 
     @GetMapping("/search-car-form")
-    public String searchForm(){
+    public String searchForm(Model model){
+        model.addAttribute("car", new CarModel());
         return "/search-car-form";
     }
 
-    @GetMapping("/search-car-result/{car_id}")
-    public String searchCarResult(@PathVariable ("car_id") int car_id, Model model){
-        model.addAttribute("cars", carService.searchCar(car_id));
+    @GetMapping("/search-car-result")
+    public String searchCarResult(@ModelAttribute CarModel carModel, Model model){
+        System.out.println("test");
+        model.addAttribute("cars", carService.searchCar(carModel.getCar_id()));
         return "/search-car-result";
     }
 

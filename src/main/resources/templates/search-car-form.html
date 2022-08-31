@@ -13,22 +13,22 @@
         </p>
 
 
-        <form class="car-search-form" action="/search-car-result" method="get">
+        <form class="car-search-form" th:object="${car}" th:action="@{/search-car-result}" method="get">
             <table>
             <tr>
-                <input type="text" th:name="car_id" id="car_id" placeholder="car-id">
+                <input type="number" min="1" th:field="*{car_id}" id="car_id" placeholder="car id">
             </tr>
 
             <tr>
                 <button type="submit">Find Car</button>
             </tr>
 
-            <tr th:each="carModelList:${cars}">
+            <!-- <tr th:each="carModelList:${cars}">
                 <td th:text="${cars.car_id}"/>
                 <td th:text="${cars.brand}"/>
                 <td th:text="${cars.model}"/>
                 <td th:text="${cars.price}"/>
-            </tr>
+            </tr> -->
 
 
         </table>

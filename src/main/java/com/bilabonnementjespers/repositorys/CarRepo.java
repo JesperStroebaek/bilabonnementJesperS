@@ -30,9 +30,10 @@ JdbcTemplate jdbcTemplate;
 
    }
    public CarModel searchCar(int car_id){
-      String sql = "SELECT * FROM bilabonnement.cars WHERE car_id = ?;";
+      String sql = "SELECT * FROM bilabonnement.cars WHERE car_id = ?";
       RowMapper<CarModel> carIdRowmapper = new BeanPropertyRowMapper<>(CarModel.class);
       CarModel c = jdbcTemplate.queryForObject(sql, carIdRowmapper, car_id);
+
       return c;
    }
    public boolean deleteCar(int car_id){
