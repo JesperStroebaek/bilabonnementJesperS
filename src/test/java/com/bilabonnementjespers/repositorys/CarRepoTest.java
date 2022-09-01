@@ -12,6 +12,6 @@ class CarRepoTest {
         CarRepo carRepo = new com.bilabonnementjespers.repositorys.CarRepo();
         carRepo.createCar(new com.bilabonnementjespers.models.CarModel());
         carRepo.carModelList();
-        assert carRepo.carModelList() != null;
+        assertEquals( carRepo.carModelList(), carRepo.jdbcTemplate);
     }
 }

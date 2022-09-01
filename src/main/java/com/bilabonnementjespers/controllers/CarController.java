@@ -11,7 +11,7 @@ import java.util.List;
 @Controller
 public class CarController {
     @Autowired
-    CarService carService;
+    private CarService carService;
 
     @GetMapping("/car-list") // todo forklar endpoint - Getmetode til at få fat i mappingen til carlisten
     public String carList(Model model) // todo forklar model - et interface fra springframework.
