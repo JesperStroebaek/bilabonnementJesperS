@@ -13,13 +13,15 @@ public class CarController {
     @Autowired
     private CarService carService;
 
-    @GetMapping("/car-list") // todo forklar endpoint - Getmetode til at få fat i mappingen til carlisten
-    public String carList(Model model) // todo forklar model - et interface fra springframework.
+
+    @GetMapping("/car-list")
+    public String carList(Model model)
     {
         List<CarModel> carModelList = carService.serviceList();
-        model.addAttribute("cars", carModelList); // todo forklar
+        model.addAttribute("cars", carModelList);
         return "/car-list";
     }
+
 
     @GetMapping("/car-form")
     public String carForm(){
