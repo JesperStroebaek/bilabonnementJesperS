@@ -1,6 +1,6 @@
 # bilabonnement.Dk
 
-byJesperS
+by JesperS
 
 Exams 2 semester
 
@@ -10,7 +10,7 @@ Exams 2 semester
 - Spring MVC
 - JDBC 
 - Thymeleaf 
-- MySql (Tomcat for dev - Azure when done) 
+- MySql (localhosted) 
   
 # FrontEnd
 - HTML5
