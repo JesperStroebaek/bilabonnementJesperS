@@ -29,7 +29,6 @@ public class CarService {
 
 
     public CarModel searchCar(int car_id){
-
         return carRepo.searchCar(car_id);
     }
     public void deleteCar(int car_id){
