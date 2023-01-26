@@ -27,9 +27,9 @@ public class MainController {
     public String registrationMain(){
         return "/reg-main";
     }
-    @GetMapping("/damage-main")
-    public String damageMain(){
-        return "/damage-main";
+    @GetMapping("/returntest-main")
+    public String returntestMain(){
+        return "returntest-main";
     }
     @GetMapping("/business-dev-main")
     public String businessMain(){
