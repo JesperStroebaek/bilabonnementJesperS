@@ -2,7 +2,12 @@ package com.bilabonnementjespers.services;
 
 @org.springframework.stereotype.Service
 public class ReturnTestService {
-    @org.springframework.beans.factory.annotation.Autowired
-    com.bilabonnementjespers.repositorys.ReturnTestRepo returnTestRepo;
 
+    public java.util.List<com.bilabonnementjespers.models.ReturnTestModel> returnTestModelList(){
+        return com.bilabonnementjespers.repositorys.ReturnTestRepo.testModelList();
+    }
+
+    public void createReturnTest(){
+
+    }
 }

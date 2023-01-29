@@ -4,16 +4,17 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class ReturnTestController {
+@org.springframework.beans.factory.annotation.Autowired
+    com.bilabonnementjespers.services.ReturnTestService returnTestService;
 
-
-@org.springframework.web.bind.annotation.GetMapping
-    public String testForm("/test-form"){
+@org.springframework.web.bind.annotation.GetMapping("/test-form")
+    public String testForm(){
         return "/test-form";
 }
-@org.springframework.web.bind.annotation.PostMapping
+@org.springframework.web.bind.annotation.PostMapping("/test-form")
     public String createReturnTest(@org.springframework.web.bind.annotation.ModelAttribute com.bilabonnementjespers.models.ReturnTestModel newTest)
 {
-    com.bilabonnementjespers.services.ReturnTestService returnTestService;
+    returnTestService.createReturnTest(newTest);
     return "redirect:/test-result";
 }
 }

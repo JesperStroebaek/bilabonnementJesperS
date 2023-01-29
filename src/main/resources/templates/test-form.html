@@ -11,17 +11,17 @@
   <table>
 
     <tr>
-      <input type="text" th:name="Order ID" id="order_id" placeholder="order_id">
+      <input type="text" th:name="order_id" id="order_id" placeholder="Order ID">
     </tr>
     <tr>
-      <input type="text" th:name="model" id="model" placeholder="model">
+      <input type="text" th:name="car_id" id="car_id" placeholder="Car ID">
     </tr>
     <tr>
-      <input type="text" th:name="price" id="price" placeholder="price">
+      <input type="text" th:name="price" id="price" placeholder="Repair Price">
     </tr>
 
     <tr>
-      <button type="submit">Create Car</button>
+      <button type="submit">Submit TestResult</button>
     </tr>
     <tr>
       <a href="/reg-main"><button type="button">Cancel</button></a>
@@ -29,6 +29,8 @@
   </table>
 </form>
   <h1>Return Test Page</h1>
-<footer th:replace="fragments::footer">
+<footer th:replace="fragments::footer"></footer>
 </body>
 </html>
+
+
