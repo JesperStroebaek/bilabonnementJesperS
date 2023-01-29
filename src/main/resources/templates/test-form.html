@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+  <head th:replace="fragments::head">
+    <title>return-test-form</title>
+</head>
+<body>
+<header th:replace="fragments::header-fragment">
+</header>
+<form action="/car-form" method="post">
+  <table>
+
+    <tr>
+      <input type="text" th:name="Order ID" id="order_id" placeholder="order_id">
+    </tr>
+    <tr>
+      <input type="text" th:name="model" id="model" placeholder="model">
+    </tr>
+    <tr>
+      <input type="text" th:name="price" id="price" placeholder="price">
+    </tr>
+
+    <tr>
+      <button type="submit">Create Car</button>
+    </tr>
+    <tr>
+      <a href="/reg-main"><button type="button">Cancel</button></a>
+    </tr>
+  </table>
+</form>
+  <h1>Return Test Page</h1>
+<footer th:replace="fragments::footer">
+</body>
+</html>
