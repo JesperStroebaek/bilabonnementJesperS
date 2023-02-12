@@ -14,7 +14,7 @@ public class ReturnTestController {
 @org.springframework.web.bind.annotation.PostMapping("/test-form")
     public String createReturnTest(@org.springframework.web.bind.annotation.ModelAttribute com.bilabonnementjespers.models.ReturnTestModel newTest)
 {
-    returnTestService.createReturnTest(newTest);
+    returnTestService.createReturnTest();
     return "redirect:/test-result";
 }
 }

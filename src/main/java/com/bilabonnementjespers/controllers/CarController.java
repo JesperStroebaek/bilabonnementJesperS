@@ -24,26 +24,29 @@ public class CarController {
 
 
     @GetMapping("/car-form")
-    public String carForm(){
+    public String carForm()
+    {
         return "/car-form";
-        }
+    }
 
     @PostMapping("/car-form")
-    public String createCar(@ModelAttribute CarModel newCar){
+    public String createCar(@ModelAttribute CarModel newCar)
+    {
         carService.createCar(newCar);
         return "redirect:/car-list";
     }
 
 
     @GetMapping("/search-car-form")
-    public String searchForm(Model model){
+    public String searchForm(Model model)
+    {
         model.addAttribute("car", new CarModel());
         return "/search-car-form";
     }
 
     @GetMapping("/search-car-result")
-    public String searchCarResult(@ModelAttribute CarModel carModel, Model model){
-        System.out.println("test");
+    public String searchCarResult(@ModelAttribute CarModel carModel, Model model)
+    {
         model.addAttribute("cars", carService.searchCar(carModel.getCar_id()));
         return "/search-car-result";
     }
