@@ -7,18 +7,23 @@
 
 <header th:replace="fragments::header-fragment"></header>
 
-<div class="page-mid">
-
+<div>
         <span th:text="${cars.car_id}"/>
         <span th:text="${cars.brand}"/>
         <span th:text="${cars.model}"/>
         <span th:text="${cars.price}"/>
 
-
-    <button class="btn" type="submit" id="delete-btn">Delete selected car?</button>
-  <button><a href="/reg-main">Return to menu</a></button>
-
 </div>
+
+<a href="/update-car"><button class="btn" id="update-btn">Update selected car?</button></a>
+
+
+<form class="delete-car-form" action="/delete-car" method="get">
+    <a href="/delete-car"><button action="/delete-car" class="btn" id="delete-btn">Delete selected car?</button></a>
+</form>
+<form class="update-car-form" action="/car-list">
+<button class="btn" id="main-menu-btn"><a href="/reg-main">Return to menu</a></button>
+</form>
 
 <footer th:replace="fragments::footer"></footer>
 </body>

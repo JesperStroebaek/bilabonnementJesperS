@@ -2,7 +2,7 @@ package com.bilabonnementjespers.models;
 
 public class CarModel {
 
-    private int car_id;
+    private Integer car_id;
     private String brand;
     private String model;
     private int price;
@@ -22,11 +22,11 @@ public class CarModel {
 
      */
 
-    public int getCar_id() {
+    public Integer getCar_id() {
         return car_id;
     }
 
-    public void setCar_id(int car_id) {
+    public void setCar_id(Integer car_id) {
         this.car_id = car_id;
     }
 

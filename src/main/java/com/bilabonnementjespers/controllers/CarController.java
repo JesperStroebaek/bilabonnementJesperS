@@ -50,6 +50,14 @@ public class CarController {
         model.addAttribute("cars", carService.searchCar(carModel.getCar_id()));
         return "/search-car-result";
     }
+    @GetMapping("/update-car")
+    public String updateCar(){
+        return "redirect:/car-list";
+    }
+@GetMapping("/delete-car")
+public String deleteCar(int car_id){
+        carService.deleteCar(car_id);
+        return "/delete-car";
 
-
+}
 }

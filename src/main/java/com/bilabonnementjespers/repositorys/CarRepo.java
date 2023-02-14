@@ -1,12 +1,15 @@
 package com.bilabonnementjespers.repositorys;
 
 import com.bilabonnementjespers.models.CarModel;
+import com.bilabonnementjespers.services.CarService;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
+import java.sql.ResultSet;
 import java.util.List;
 
 @Repository
@@ -29,17 +32,21 @@ JdbcTemplate jdbcTemplate;
       ,newCar.getPrice());
 
    }
-   public CarModel searchCar(int car_id){
+   public CarModel searchCar(int car_id) {
       String sql = "SELECT * FROM bilabonnement.cars WHERE car_id = ?";
       RowMapper<CarModel> carIdRowmapper = new BeanPropertyRowMapper<>(CarModel.class);
       CarModel c = jdbcTemplate.queryForObject(sql, carIdRowmapper, car_id);
+       return c;
 
-      return c;
+
    }
-   public boolean deleteCar(int car_id){
+   public void deleteCar(int car_id) {
       String sql = "DELETE FROM bilabonnement.cars WHERE car_id = ?";
-      return jdbcTemplate.update(sql, car_id) > 0;
+      jdbcTemplate.update(sql);
+
    }
+
+
    public void updateCar(int car_id, CarModel c){
       String sql = "UPDATE bilabonnement.cars SET car_id = ?, brand = ?, model = ?, price = ?";
       jdbcTemplate.update(sql,c.getCar_id(),c.getBrand(),c.getModel(),c.getPrice());
