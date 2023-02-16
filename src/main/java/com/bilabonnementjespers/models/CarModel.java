@@ -12,7 +12,7 @@ public class CarModel {
 
     }
 
-    /*
+
     public CarModel(int car_id, String brand,String model,int price){
         this.car_id = car_id;
         this.brand = brand;
@@ -20,7 +20,7 @@ public class CarModel {
         this.price = price;
     }
 
-     */
+
 
     public Integer getCar_id() {
         return car_id;
