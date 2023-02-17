@@ -47,6 +47,17 @@ public class CarController {
         model.addAttribute("cars", carService.searchCar(carModel.getCar_id()));
         return "/search-car-result";
     }
+    @GetMapping("/delete-car/{car_id}")
+    public String deleteCar(@PathVariable("carId") int car_id){
+        Boolean deleted = carService.deleteCar(car_id);
 
+
+        //todo spørg jeff
+        if (deleted){
+            return "redirect:/";
+        }else {
+            return "redirect:/";
+        }
+    }
 
 }

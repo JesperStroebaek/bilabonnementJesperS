@@ -2,74 +2,42 @@ package com.bilabonnementjespers.models;
 
 public class ReturnTestModel {
 
-    int order_id;
-    int car_id;
-    String first_name;
-    String last_name;
-    String repair_description;
-    double repair_price = -1;
+    int testId;
+    String damageDescription;
+    double returnTestPrice;
 
-    public ReturnTestModel(){};
 
-    public ReturnTestModel(int order_id, int car_id, String first_name, String last_name, String repair_description, double repair_price) {
-        this.order_id = order_id;
-        this.car_id = car_id;
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.repair_description = repair_description;
-        this.repair_price = repair_price;
+    public ReturnTestModel() {
     }
 
-
-
-    public int getOrder_id() {
-        return order_id;
+    public ReturnTestModel(int testId, String damageDescription, double returnTestPrice)
+    {
+        this.testId = testId;
+        this.damageDescription = damageDescription;
+        this.returnTestPrice = returnTestPrice;
     }
 
-    public void setOrder_id(int order_id) {
-        this.order_id = order_id;
+    public int getTestId() {
+        return testId;
     }
 
-    public int getCar_id() {
-        return car_id;
+    public void setTestId(int testId) {
+        this.testId = testId;
     }
 
-    public void setCar_id(int car_id) {
-        this.car_id = car_id;
+    public String getDamageDescription() {
+        return damageDescription;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public void setDamageDescription(String damageDescription) {
+        this.damageDescription = damageDescription;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public double getReturnTestPrice() {
+        return returnTestPrice;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public void setReturnTestPrice(double returnTestPrice) {
+        this.returnTestPrice = returnTestPrice;
     }
-
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
-    }
-
-    public String getRepair_description() {
-        return repair_description;
-    }
-
-    public void setRepair_description(String repair_description) {
-        this.repair_description = repair_description;
-    }
-
-    public double getRepair_price() {
-        return repair_price;
-    }
-
-    public void setRepair_price(double repair_price) {
-        this.repair_price = repair_price;
-    }
-
-
-
 }
