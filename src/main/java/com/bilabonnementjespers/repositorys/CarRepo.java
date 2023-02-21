@@ -37,9 +37,9 @@ JdbcTemplate jdbcTemplate;
       return c;
    }
 
-   public boolean deleteCar(int car_id){
+   public void deleteCar(int car_id){
       String sql = "DELETE FROM bilabonnement.cars WHERE car_id = ?";
-      return jdbcTemplate.update(sql, car_id) > 0;
+      jdbcTemplate.update(sql, car_id);
    }
    public void updateCar(int car_id, CarModel c){
       String sql = "UPDATE bilabonnement.cars SET car_id = ?, brand = ?, model = ?, price = ?";
