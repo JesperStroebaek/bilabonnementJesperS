@@ -48,15 +48,16 @@ public class CarController {
         return "/search-car-result";
     }
     @GetMapping("/delete-car/{car_id}")
-    public String deleteCar(@PathVariable("carId") int car_id){
-        Boolean deleted = carService.deleteCar(car_id);
+    public String deleteCar(@PathVariable("car_id") int carId)
+    {
+        Boolean deleted = carService.deleteCar(carId);
 
 
         //todo spørg jeff
         if (deleted){
-            return "redirect:/";
+            return "redirect:/car-list";
         }else {
-            return "redirect:/";
+            return "delete-car";
         }
     }
 

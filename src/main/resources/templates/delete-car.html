@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="fragments::head">
+  <title>delete-car</title>
+</head>
+<body>
+<header th:replace="fragments::header"></header>
+<h1>WARNING.!</h1>
+<h3>You are about to delete a car from the database</h3>
+<p>This action can NOT BE UNDONE.!</p>
+
+<button class="btn" id="delete-btn">DELETE CAR</button>
+
+<footer th:replace="fragments::footer"></footer>
+</body>
+
+</html>
